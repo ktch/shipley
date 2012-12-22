@@ -78,25 +78,23 @@ class __TwigTemplate_33afe9cf7b08eaa76016f0d5c9f9180c extends Twig_Template
 \t
 \t<nav>
 \t\t<ul>
-\t\t\t<li><a href=\"#intro\">Top</a></li>
-\t\t\t<li><a href=\"#work\">Work</a></li>
-\t\t\t<li><a href=\"#services\">Services</a></li>
-\t\t\t<li><a href=\"#about\">About</a></li>
-\t\t\t<li><a href=\"#contact\">Contact</a></li>
+\t\t\t<li><a href=\"#story\">The Story</a></li>
+\t\t\t<li><a href=\"#plan\">The Plan</a></li>
+\t\t\t<li><a href=\"#team\">The Team</a></li>
+\t\t\t<li><a href=\"#contact\">Get Involved</a></li>
 \t\t</ul>
 \t\t
 \t\t<select name=\"dropdpown\" size=\"1\" onChange=\"scrollTo(this.value)\">
 \t\t\t<option value=\"\" selected=\"selected\">Menu</option>
-\t\t\t<option value=\"#intro\">Top</option>
-\t\t\t<option value=\"#work\">Work</option>
-\t\t\t<option value=\"#services\">Services</option> 
-\t\t\t<option value=\"#about\">About</option> 
-\t\t\t<option value=\"#contact\">Contact</option> 
+\t\t\t<option value=\"#story\">The Story</option>
+\t\t\t<option value=\"#plan\">The Plan</option>
+\t\t\t<option value=\"#team\">The Team</option> 
+\t\t\t<option value=\"#contact\">Get Involved</option> 
 \t\t</select>
 \t</nav>
 \t
 \t
-\t<div id=\"work\">
+\t<div id=\"story\">
 \t\t<div class=\"container\">
 \t\t
 \t\t\t<div class=\"sixteen columns\">
@@ -122,7 +120,6 @@ class __TwigTemplate_33afe9cf7b08eaa76016f0d5c9f9180c extends Twig_Template
 \t\t\t\t<p class=\"mid-text\">Send a distress signal, and inform the Senate that all on board were killed. Alderaan? I'm not going to Alderaan. I've got to go home. It's late, I'm in for it as it is. She must have hidden the plans in the escape pod.</p>
 \t\t\t</div>
 \t\t\t
-\t\t\t<div class=\"clear\"></div>
 \t\t\t
 \t\t\t
 \t\t\t<div class=\"clear\"></div>
@@ -134,11 +131,11 @@ class __TwigTemplate_33afe9cf7b08eaa76016f0d5c9f9180c extends Twig_Template
 \t
 \t<div id=\"separator1\">
 \t\t<div class=\"bg2\"></div>
-\t\t<p class=\"separator\">A tremor in the Force. The last time I felt it was in the <br />presence of my old master</p>
+\t\t<p class=\"separator\">A forgotten alleyway of dumpsters and fire escapes</p>
 \t</div>
 \t
 \t
-\t<div id=\"services\">
+\t<div id=\"plan\">
 \t\t<div class=\"container\">
 \t\t
 \t\t\t<div class=\"sixteen columns\">
@@ -191,11 +188,11 @@ class __TwigTemplate_33afe9cf7b08eaa76016f0d5c9f9180c extends Twig_Template
 \t</div>
 \t
 \t
-\t<div id=\"about\">
+\t<div id=\"team\">
 \t\t<div class=\"container\">
 \t\t
 \t\t\t<div class=\"sixteen columns\">
-\t\t\t\t<h2><span class=\"lines\">About</span></h2>
+\t\t\t\t<h2><span class=\"lines\">The Team</span></h2>
 \t\t\t</div> <!-- end sixteen columns -->
 \t\t\t
 \t\t\t<div class=\"eight columns\">
@@ -208,38 +205,16 @@ class __TwigTemplate_33afe9cf7b08eaa76016f0d5c9f9180c extends Twig_Template
 \t\t\t
 \t\t\t<div class=\"clear\"></div>
 \t\t\t
-\t\t\t<div class=\"skills\">
-\t\t\t
-\t\t\t\t<div class=\"sixteen columns\">
-\t\t\t\t\t<h3><span class=\"lines\">Skills</span></h3>
-\t\t\t\t</div> <!-- end sixteen columns -->
-\t\t\t\t
-\t\t\t\t<div class=\"sixteen columns\">
-\t\t\t\t\t<p>PHP</p>
-\t\t\t\t\t<div class=\"skill-bg\"><div class=\"skill1\"></div></div>
-\t\t\t\t\t<p>Javascript</p>
-\t\t\t\t\t<div class=\"skill-bg\"><div class=\"skill2\"></div></div>
-\t\t\t\t\t<p>Illustrator</p>
-\t\t\t\t\t<div class=\"skill-bg\"><div class=\"skill3\"></div></div>
-\t\t\t\t\t<p>HTML/CSS</p>
-\t\t\t\t\t<div class=\"skill-bg\"><div class=\"skill4\"></div></div>
-\t\t\t\t\t<p>Photoshop</p>
-\t\t\t\t\t<div class=\"skill-bg\"><div class=\"skill5\"></div></div>
-\t\t\t\t</div> <!-- end sixteen columns -->
-\t\t\t</div> <!-- end skills -->
 \t\t\t
 \t\t\t<div class=\"clear\"></div>
 \t\t\t
 \t\t\t<div class=\"team\">
 \t\t\t
-\t\t\t\t<div class=\"sixteen columns\">
-\t\t\t\t\t<h3><span class=\"lines\">The Team</span></h3>
-\t\t\t\t</div> <!-- end sixteen columns -->
 \t\t\t
 \t\t\t\t<div class=\"one-third column\">
 \t\t\t\t\t<img src=\"images/about-pic.png\" alt=\"\" />
-\t\t\t\t\t<p class=\"t-name\">Cali Doe</p>
-\t\t\t\t\t<p class=\"t-type\">Web Designer</p>
+\t\t\t\t\t<p class=\"t-name\">Michael Kalmbach</p>
+\t\t\t\t\t<p class=\"t-type\">Producer</p>
 \t\t\t\t\t<ul>
 \t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-twitter.png\" alt=\"\" /></a></li>
 \t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-facebook.png\" alt=\"\" /></a></li>

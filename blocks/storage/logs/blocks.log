@@ -3129,3 +3129,561 @@ $_SERVER=array (
 2012/12/22 08:44:21 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_routes` `t` ORDER BY sortOrder)
 
 ******************************************************************************************************
+2012/12/22 08:59:26 [info] [application] User: michael (ID: 1)
+
+$_COOKIE=array (
+  'exp_perpage' => '50',
+  'exp_tracker' => 'a:4:{i:0;s:6:"mobile";i:1;s:7:"contact";i:2;s:6:"mobile";i:3;s:5:"index";}',
+  'exp_last_visit' => '1355981061',
+  'exp_last_activity' => '1356003223',
+  'exp_expiration' => '1387539223',
+  'username' => '6aa309d7e09ba54d6eba6660b45818064cdc138bs:7:"michael";',
+  'BlocksSessionId' => '8305af1b520e837d93a86342a001f8a0',
+)
+
+$_SESSION=array (
+  '2d483add0f9c9b2737cc25084eb7fcd8__id' => '1',
+  '2d483add0f9c9b2737cc25084eb7fcd8__name' => 'michael',
+  '2d483add0f9c9b2737cc25084eb7fcd8authSessionToken' => '9e0bdb92-faa8-4516-8dbe-5d681046ee0b',
+  '2d483add0f9c9b2737cc25084eb7fcd8__states' => 
+  array (
+    'authSessionToken' => true,
+  ),
+)
+
+$_SERVER=array (
+  'HTTP_HOST' => 'localhost:8888',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'HTTP_CACHE_CONTROL' => 'max-age=0',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.101 Safari/537.11',
+  'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8',
+  'HTTP_ACCEPT_CHARSET' => 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
+  'HTTP_COOKIE' => 'exp_perpage=50; exp_tracker=a%3A4%3A%7Bi%3A0%3Bs%3A6%3A%22mobile%22%3Bi%3A1%3Bs%3A7%3A%22contact%22%3Bi%3A2%3Bs%3A6%3A%22mobile%22%3Bi%3A3%3Bs%3A5%3A%22index%22%3B%7D; exp_last_visit=1355981061; exp_last_activity=1356003223; exp_expiration=1387539223; username=6aa309d7e09ba54d6eba6660b45818064cdc138bs%3A7%3A%22michael%22%3B; BlocksSessionId=8305af1b520e837d93a86342a001f8a0',
+  'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_ADDR' => '::1',
+  'SERVER_PORT' => '8888',
+  'REMOTE_ADDR' => '::1',
+  'DOCUMENT_ROOT' => '/Users/zachphillips/Dev/shipley',
+  'SERVER_ADMIN' => 'you@example.com',
+  'SCRIPT_FILENAME' => '/Users/zachphillips/Dev/shipley/index.php',
+  'REMOTE_PORT' => '64668',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/',
+  'SCRIPT_NAME' => '/index.php',
+  'PHP_SELF' => '/index.php',
+  'REQUEST_TIME_FLOAT' => 1356166766.48,
+  'REQUEST_TIME' => 1356166766,
+  'argv' => 
+  array (
+  ),
+  'argc' => 0,
+)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_info`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_info`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_info`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_info`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_activity`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_activity`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_activity`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_activity`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_info` `t` LIMIT 1)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_info` `t` LIMIT 1)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_users`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_users`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_users`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_users`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_users` `t` WHERE `t`.`id`=1 LIMIT 1)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_users` `t` WHERE `t`.`id`=1 LIMIT 1)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_plugins`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_plugins`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_plugins`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_plugins`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_plugins` `t` WHERE `t`.`enabled`=:yp0. Bound with :yp0=true)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_plugins` `t` WHERE `t`.`enabled`=:yp0. Bound with :yp0=true)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_pages`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_pages`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_pages`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_pages`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_pages` `t` WHERE `t`.`uri`=:yp0 LIMIT 1. Bound with :yp0='')
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_pages` `t` WHERE `t`.`uri`=:yp0 LIMIT 1. Bound with :yp0='')
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_routes`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_routes`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_routes`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_routes`)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_routes` `t` ORDER BY sortOrder)
+2012/12/22 08:59:26 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_routes` `t` ORDER BY sortOrder)
+
+******************************************************************************************************
+2012/12/22 09:04:35 [info] [application] User: michael (ID: 1)
+
+$_COOKIE=array (
+  'exp_perpage' => '50',
+  'exp_tracker' => 'a:4:{i:0;s:6:"mobile";i:1;s:7:"contact";i:2;s:6:"mobile";i:3;s:5:"index";}',
+  'exp_last_visit' => '1355981061',
+  'exp_last_activity' => '1356003223',
+  'exp_expiration' => '1387539223',
+  'username' => '6aa309d7e09ba54d6eba6660b45818064cdc138bs:7:"michael";',
+  'BlocksSessionId' => '8305af1b520e837d93a86342a001f8a0',
+)
+
+$_SESSION=array (
+  '2d483add0f9c9b2737cc25084eb7fcd8__id' => '1',
+  '2d483add0f9c9b2737cc25084eb7fcd8__name' => 'michael',
+  '2d483add0f9c9b2737cc25084eb7fcd8authSessionToken' => '9e0bdb92-faa8-4516-8dbe-5d681046ee0b',
+  '2d483add0f9c9b2737cc25084eb7fcd8__states' => 
+  array (
+    'authSessionToken' => true,
+  ),
+)
+
+$_SERVER=array (
+  'HTTP_HOST' => 'localhost:8888',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'HTTP_CACHE_CONTROL' => 'max-age=0',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.101 Safari/537.11',
+  'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8',
+  'HTTP_ACCEPT_CHARSET' => 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
+  'HTTP_COOKIE' => 'exp_perpage=50; exp_tracker=a%3A4%3A%7Bi%3A0%3Bs%3A6%3A%22mobile%22%3Bi%3A1%3Bs%3A7%3A%22contact%22%3Bi%3A2%3Bs%3A6%3A%22mobile%22%3Bi%3A3%3Bs%3A5%3A%22index%22%3B%7D; exp_last_visit=1355981061; exp_last_activity=1356003223; exp_expiration=1387539223; username=6aa309d7e09ba54d6eba6660b45818064cdc138bs%3A7%3A%22michael%22%3B; BlocksSessionId=8305af1b520e837d93a86342a001f8a0',
+  'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_ADDR' => '::1',
+  'SERVER_PORT' => '8888',
+  'REMOTE_ADDR' => '::1',
+  'DOCUMENT_ROOT' => '/Users/zachphillips/Dev/shipley',
+  'SERVER_ADMIN' => 'you@example.com',
+  'SCRIPT_FILENAME' => '/Users/zachphillips/Dev/shipley/index.php',
+  'REMOTE_PORT' => '64715',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/',
+  'SCRIPT_NAME' => '/index.php',
+  'PHP_SELF' => '/index.php',
+  'REQUEST_TIME_FLOAT' => 1356167075.61,
+  'REQUEST_TIME' => 1356167075,
+  'argv' => 
+  array (
+  ),
+  'argc' => 0,
+)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_info`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_info`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_info`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_info`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_activity`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_activity`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_activity`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_activity`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_info` `t` LIMIT 1)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_info` `t` LIMIT 1)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_users`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_users`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_users`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_users`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_users` `t` WHERE `t`.`id`=1 LIMIT 1)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_users` `t` WHERE `t`.`id`=1 LIMIT 1)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_plugins`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_plugins`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_plugins`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_plugins`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_plugins` `t` WHERE `t`.`enabled`=:yp0. Bound with :yp0=true)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_plugins` `t` WHERE `t`.`enabled`=:yp0. Bound with :yp0=true)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_pages`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_pages`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_pages`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_pages`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_pages` `t` WHERE `t`.`uri`=:yp0 LIMIT 1. Bound with :yp0='')
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_pages` `t` WHERE `t`.`uri`=:yp0 LIMIT 1. Bound with :yp0='')
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_routes`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_routes`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_routes`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_routes`)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_routes` `t` ORDER BY sortOrder)
+2012/12/22 09:04:35 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_routes` `t` ORDER BY sortOrder)
+
+******************************************************************************************************
+2012/12/22 09:05:10 [info] [application] User: michael (ID: 1)
+
+$_COOKIE=array (
+  'exp_perpage' => '50',
+  'exp_tracker' => 'a:4:{i:0;s:6:"mobile";i:1;s:7:"contact";i:2;s:6:"mobile";i:3;s:5:"index";}',
+  'exp_last_visit' => '1355981061',
+  'exp_last_activity' => '1356003223',
+  'exp_expiration' => '1387539223',
+  'username' => '6aa309d7e09ba54d6eba6660b45818064cdc138bs:7:"michael";',
+  'BlocksSessionId' => '8305af1b520e837d93a86342a001f8a0',
+)
+
+$_SESSION=array (
+  '2d483add0f9c9b2737cc25084eb7fcd8__id' => '1',
+  '2d483add0f9c9b2737cc25084eb7fcd8__name' => 'michael',
+  '2d483add0f9c9b2737cc25084eb7fcd8authSessionToken' => '9e0bdb92-faa8-4516-8dbe-5d681046ee0b',
+  '2d483add0f9c9b2737cc25084eb7fcd8__states' => 
+  array (
+    'authSessionToken' => true,
+  ),
+)
+
+$_SERVER=array (
+  'HTTP_HOST' => 'localhost:8888',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'HTTP_CACHE_CONTROL' => 'max-age=0',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.101 Safari/537.11',
+  'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8',
+  'HTTP_ACCEPT_CHARSET' => 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
+  'HTTP_COOKIE' => 'exp_perpage=50; exp_tracker=a%3A4%3A%7Bi%3A0%3Bs%3A6%3A%22mobile%22%3Bi%3A1%3Bs%3A7%3A%22contact%22%3Bi%3A2%3Bs%3A6%3A%22mobile%22%3Bi%3A3%3Bs%3A5%3A%22index%22%3B%7D; exp_last_visit=1355981061; exp_last_activity=1356003223; exp_expiration=1387539223; username=6aa309d7e09ba54d6eba6660b45818064cdc138bs%3A7%3A%22michael%22%3B; BlocksSessionId=8305af1b520e837d93a86342a001f8a0',
+  'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_ADDR' => '::1',
+  'SERVER_PORT' => '8888',
+  'REMOTE_ADDR' => '::1',
+  'DOCUMENT_ROOT' => '/Users/zachphillips/Dev/shipley',
+  'SERVER_ADMIN' => 'you@example.com',
+  'SCRIPT_FILENAME' => '/Users/zachphillips/Dev/shipley/index.php',
+  'REMOTE_PORT' => '64729',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/',
+  'SCRIPT_NAME' => '/index.php',
+  'PHP_SELF' => '/index.php',
+  'REQUEST_TIME_FLOAT' => 1356167110.87,
+  'REQUEST_TIME' => 1356167110,
+  'argv' => 
+  array (
+  ),
+  'argc' => 0,
+)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_info`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_info`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_info`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_info`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_activity`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_activity`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_activity`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_activity`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_info` `t` LIMIT 1)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_info` `t` LIMIT 1)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_users`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_users`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_users`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_users`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_users` `t` WHERE `t`.`id`=1 LIMIT 1)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_users` `t` WHERE `t`.`id`=1 LIMIT 1)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_plugins`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_plugins`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_plugins`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_plugins`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_plugins` `t` WHERE `t`.`enabled`=:yp0. Bound with :yp0=true)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_plugins` `t` WHERE `t`.`enabled`=:yp0. Bound with :yp0=true)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_pages`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_pages`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_pages`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_pages`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_pages` `t` WHERE `t`.`uri`=:yp0 LIMIT 1. Bound with :yp0='')
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_pages` `t` WHERE `t`.`uri`=:yp0 LIMIT 1. Bound with :yp0='')
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_routes`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_routes`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_routes`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_routes`)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_routes` `t` ORDER BY sortOrder)
+2012/12/22 09:05:11 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_routes` `t` ORDER BY sortOrder)
+
+******************************************************************************************************
+2012/12/22 09:07:15 [info] [application] User: michael (ID: 1)
+
+$_COOKIE=array (
+  'exp_perpage' => '50',
+  'exp_tracker' => 'a:4:{i:0;s:6:"mobile";i:1;s:7:"contact";i:2;s:6:"mobile";i:3;s:5:"index";}',
+  'exp_last_visit' => '1355981061',
+  'exp_last_activity' => '1356003223',
+  'exp_expiration' => '1387539223',
+  'username' => '6aa309d7e09ba54d6eba6660b45818064cdc138bs:7:"michael";',
+  'BlocksSessionId' => '8305af1b520e837d93a86342a001f8a0',
+)
+
+$_SESSION=array (
+  '2d483add0f9c9b2737cc25084eb7fcd8__id' => '1',
+  '2d483add0f9c9b2737cc25084eb7fcd8__name' => 'michael',
+  '2d483add0f9c9b2737cc25084eb7fcd8authSessionToken' => '9e0bdb92-faa8-4516-8dbe-5d681046ee0b',
+  '2d483add0f9c9b2737cc25084eb7fcd8__states' => 
+  array (
+    'authSessionToken' => true,
+  ),
+)
+
+$_SERVER=array (
+  'HTTP_HOST' => 'localhost:8888',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'HTTP_CACHE_CONTROL' => 'max-age=0',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.101 Safari/537.11',
+  'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8',
+  'HTTP_ACCEPT_CHARSET' => 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
+  'HTTP_COOKIE' => 'exp_perpage=50; exp_tracker=a%3A4%3A%7Bi%3A0%3Bs%3A6%3A%22mobile%22%3Bi%3A1%3Bs%3A7%3A%22contact%22%3Bi%3A2%3Bs%3A6%3A%22mobile%22%3Bi%3A3%3Bs%3A5%3A%22index%22%3B%7D; exp_last_visit=1355981061; exp_last_activity=1356003223; exp_expiration=1387539223; username=6aa309d7e09ba54d6eba6660b45818064cdc138bs%3A7%3A%22michael%22%3B; BlocksSessionId=8305af1b520e837d93a86342a001f8a0',
+  'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_ADDR' => '::1',
+  'SERVER_PORT' => '8888',
+  'REMOTE_ADDR' => '::1',
+  'DOCUMENT_ROOT' => '/Users/zachphillips/Dev/shipley',
+  'SERVER_ADMIN' => 'you@example.com',
+  'SCRIPT_FILENAME' => '/Users/zachphillips/Dev/shipley/index.php',
+  'REMOTE_PORT' => '64749',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/',
+  'SCRIPT_NAME' => '/index.php',
+  'PHP_SELF' => '/index.php',
+  'REQUEST_TIME_FLOAT' => 1356167235.37,
+  'REQUEST_TIME' => 1356167235,
+  'argv' => 
+  array (
+  ),
+  'argc' => 0,
+)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_info`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_info`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_info`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_info`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_activity`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_activity`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_activity`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_activity`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_info` `t` LIMIT 1)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_info` `t` LIMIT 1)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_users`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_users`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_users`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_users`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_users` `t` WHERE `t`.`id`=1 LIMIT 1)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_users` `t` WHERE `t`.`id`=1 LIMIT 1)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_plugins`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_plugins`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_plugins`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_plugins`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_plugins` `t` WHERE `t`.`enabled`=:yp0. Bound with :yp0=true)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_plugins` `t` WHERE `t`.`enabled`=:yp0. Bound with :yp0=true)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_pages`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_pages`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_pages`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_pages`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_pages` `t` WHERE `t`.`uri`=:yp0 LIMIT 1. Bound with :yp0='')
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_pages` `t` WHERE `t`.`uri`=:yp0 LIMIT 1. Bound with :yp0='')
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_routes`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_routes`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_routes`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_routes`)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_routes` `t` ORDER BY sortOrder)
+2012/12/22 09:07:15 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_routes` `t` ORDER BY sortOrder)
+
+******************************************************************************************************
+2012/12/22 09:08:46 [info] [application] User: michael (ID: 1)
+
+$_COOKIE=array (
+  'exp_perpage' => '50',
+  'exp_tracker' => 'a:4:{i:0;s:6:"mobile";i:1;s:7:"contact";i:2;s:6:"mobile";i:3;s:5:"index";}',
+  'exp_last_visit' => '1355981061',
+  'exp_last_activity' => '1356003223',
+  'exp_expiration' => '1387539223',
+  'username' => '6aa309d7e09ba54d6eba6660b45818064cdc138bs:7:"michael";',
+  'BlocksSessionId' => '8305af1b520e837d93a86342a001f8a0',
+)
+
+$_SESSION=array (
+  '2d483add0f9c9b2737cc25084eb7fcd8__id' => '1',
+  '2d483add0f9c9b2737cc25084eb7fcd8__name' => 'michael',
+  '2d483add0f9c9b2737cc25084eb7fcd8authSessionToken' => '9e0bdb92-faa8-4516-8dbe-5d681046ee0b',
+  '2d483add0f9c9b2737cc25084eb7fcd8__states' => 
+  array (
+    'authSessionToken' => true,
+  ),
+)
+
+$_SERVER=array (
+  'HTTP_HOST' => 'localhost:8888',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'HTTP_CACHE_CONTROL' => 'max-age=0',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.101 Safari/537.11',
+  'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8',
+  'HTTP_ACCEPT_CHARSET' => 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
+  'HTTP_COOKIE' => 'exp_perpage=50; exp_tracker=a%3A4%3A%7Bi%3A0%3Bs%3A6%3A%22mobile%22%3Bi%3A1%3Bs%3A7%3A%22contact%22%3Bi%3A2%3Bs%3A6%3A%22mobile%22%3Bi%3A3%3Bs%3A5%3A%22index%22%3B%7D; exp_last_visit=1355981061; exp_last_activity=1356003223; exp_expiration=1387539223; username=6aa309d7e09ba54d6eba6660b45818064cdc138bs%3A7%3A%22michael%22%3B; BlocksSessionId=8305af1b520e837d93a86342a001f8a0',
+  'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_ADDR' => '::1',
+  'SERVER_PORT' => '8888',
+  'REMOTE_ADDR' => '::1',
+  'DOCUMENT_ROOT' => '/Users/zachphillips/Dev/shipley',
+  'SERVER_ADMIN' => 'you@example.com',
+  'SCRIPT_FILENAME' => '/Users/zachphillips/Dev/shipley/index.php',
+  'REMOTE_PORT' => '64763',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/',
+  'SCRIPT_NAME' => '/index.php',
+  'PHP_SELF' => '/index.php',
+  'REQUEST_TIME_FLOAT' => 1356167326.08,
+  'REQUEST_TIME' => 1356167326,
+  'argv' => 
+  array (
+  ),
+  'argc' => 0,
+)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_info`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_info`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_info`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_info`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_activity`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_activity`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_activity`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_activity`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_info` `t` LIMIT 1)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_info` `t` LIMIT 1)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_users`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_users`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_users`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_users`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_users` `t` WHERE `t`.`id`=1 LIMIT 1)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_users` `t` WHERE `t`.`id`=1 LIMIT 1)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_plugins`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_plugins`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_plugins`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_plugins`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_plugins` `t` WHERE `t`.`enabled`=:yp0. Bound with :yp0=true)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_plugins` `t` WHERE `t`.`enabled`=:yp0. Bound with :yp0=true)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_pages`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_pages`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_pages`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_pages`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_pages` `t` WHERE `t`.`uri`=:yp0 LIMIT 1. Bound with :yp0='')
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_pages` `t` WHERE `t`.`uri`=:yp0 LIMIT 1. Bound with :yp0='')
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_routes`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_routes`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_routes`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_routes`)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_routes` `t` ORDER BY sortOrder)
+2012/12/22 09:08:46 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_routes` `t` ORDER BY sortOrder)
+
+******************************************************************************************************
+2012/12/22 09:09:36 [info] [application] User: michael (ID: 1)
+
+$_COOKIE=array (
+  'exp_perpage' => '50',
+  'exp_tracker' => 'a:4:{i:0;s:6:"mobile";i:1;s:7:"contact";i:2;s:6:"mobile";i:3;s:5:"index";}',
+  'exp_last_visit' => '1355981061',
+  'exp_last_activity' => '1356003223',
+  'exp_expiration' => '1387539223',
+  'username' => '6aa309d7e09ba54d6eba6660b45818064cdc138bs:7:"michael";',
+  'BlocksSessionId' => '8305af1b520e837d93a86342a001f8a0',
+)
+
+$_SESSION=array (
+  '2d483add0f9c9b2737cc25084eb7fcd8__id' => '1',
+  '2d483add0f9c9b2737cc25084eb7fcd8__name' => 'michael',
+  '2d483add0f9c9b2737cc25084eb7fcd8authSessionToken' => '9e0bdb92-faa8-4516-8dbe-5d681046ee0b',
+  '2d483add0f9c9b2737cc25084eb7fcd8__states' => 
+  array (
+    'authSessionToken' => true,
+  ),
+)
+
+$_SERVER=array (
+  'HTTP_HOST' => 'localhost:8888',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'HTTP_CACHE_CONTROL' => 'max-age=0',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.101 Safari/537.11',
+  'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8',
+  'HTTP_ACCEPT_CHARSET' => 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
+  'HTTP_COOKIE' => 'exp_perpage=50; exp_tracker=a%3A4%3A%7Bi%3A0%3Bs%3A6%3A%22mobile%22%3Bi%3A1%3Bs%3A7%3A%22contact%22%3Bi%3A2%3Bs%3A6%3A%22mobile%22%3Bi%3A3%3Bs%3A5%3A%22index%22%3B%7D; exp_last_visit=1355981061; exp_last_activity=1356003223; exp_expiration=1387539223; username=6aa309d7e09ba54d6eba6660b45818064cdc138bs%3A7%3A%22michael%22%3B; BlocksSessionId=8305af1b520e837d93a86342a001f8a0',
+  'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin',
+  'SERVER_SIGNATURE' => '',
+  'SERVER_SOFTWARE' => 'Apache',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_ADDR' => '::1',
+  'SERVER_PORT' => '8888',
+  'REMOTE_ADDR' => '::1',
+  'DOCUMENT_ROOT' => '/Users/zachphillips/Dev/shipley',
+  'SERVER_ADMIN' => 'you@example.com',
+  'SCRIPT_FILENAME' => '/Users/zachphillips/Dev/shipley/index.php',
+  'REMOTE_PORT' => '64770',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/',
+  'SCRIPT_NAME' => '/index.php',
+  'PHP_SELF' => '/index.php',
+  'REQUEST_TIME_FLOAT' => 1356167376.08,
+  'REQUEST_TIME' => 1356167376,
+  'argv' => 
+  array (
+  ),
+  'argc' => 0,
+)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_info`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_info`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_info`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_info`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_activity`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_activity`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_activity`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_activity`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_info` `t` LIMIT 1)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_info` `t` LIMIT 1)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_users`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_users`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_users`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_users`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_users` `t` WHERE `t`.`id`=1 LIMIT 1)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_users` `t` WHERE `t`.`id`=1 LIMIT 1)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_plugins`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_plugins`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_plugins`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_plugins`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_plugins` `t` WHERE `t`.`enabled`=:yp0. Bound with :yp0=true)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_plugins` `t` WHERE `t`.`enabled`=:yp0. Bound with :yp0=true)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_pages`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_pages`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_pages`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_pages`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_pages` `t` WHERE `t`.`uri`=:yp0 LIMIT 1. Bound with :yp0='')
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_pages` `t` WHERE `t`.`uri`=:yp0 LIMIT 1. Bound with :yp0='')
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_routes`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW COLUMNS FROM `blx_routes`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_routes`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SHOW CREATE TABLE `blx_routes`)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] begin:system.db.CDbCommand.query(SELECT * FROM `blx_routes` `t` ORDER BY sortOrder)
+2012/12/22 09:09:36 [profile] [system.db.CDbCommand.query] end:system.db.CDbCommand.query(SELECT * FROM `blx_routes` `t` ORDER BY sortOrder)
+
+******************************************************************************************************
