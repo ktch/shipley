@@ -1,0 +1,108 @@
+<?php
+namespace Blocks;
+
+/**
+ * Blocks by Pixel & Tonic
+ *
+ * @package   Blocks
+ * @author    Pixel & Tonic, Inc.
+ * @copyright Copyright (c) 2012, Pixel & Tonic, Inc.
+ * @license   http://blockscms.com/license1.0.html Blocks License
+ * @link      http://blockscms.com
+ */
+
+/**
+ *
+ */
+class AssetFileModel extends BaseEntityModel
+{
+
+	/**
+	 * User the filename as the string representation.
+	 *
+	 * @return string
+	 */
+	function __toString()
+	{
+		return $this->filename;
+	}
+
+	/**
+	 * @return array
+	 */
+	public function defineAttributes()
+	{
+		return array(
+			'id'			=> AttributeType::Number,
+			'sourceId'		=> AttributeType::Number,
+			'folderId'		=> AttributeType::Number,
+			'contentId'		=> AttributeType::Number,
+			'filename'		=> AttributeType::String,
+			'originalName'	=> AttributeType::String,
+			'kind'			=> AttributeType::String,
+			'width'			=> AttributeType::Number,
+			'height'		=> AttributeType::Number,
+			'size'			=> AttributeType::Number,
+			'dateModified'	=> AttributeType::DateTime
+		);
+	}
+
+	/**
+	 * @return AssetFolderModel|null
+	 */
+	public function getFolder()
+	{
+		return blx()->assets->getFolderById($this->folderId);
+	}
+
+	/**
+	 * Returns the URL to the file.
+	 *
+	 * @return string|null
+	 */
+	public function getUrl()
+	{
+		return blx()->assetSources->getSourceTypeById($this->sourceId)->getSettings()->url . $this->getFolder()->fullPath . $this->filename;
+	}
+
+	/**
+	 * Get Thumbnail URL.
+	 *
+	 * @param int $size
+	 * @return string
+	 */
+	public function getThumbnailUrl($size = 125)
+	{
+		if (!is_numeric($size))
+		{
+			$size = 125;
+		}
+
+		return UrlHelper::getResourceUrl('assets/' . $this->id . '/' . $size);
+
+	}
+
+	/**
+	 * Gets the blocks.
+	 *
+	 * @access protected
+	 * @return array
+	 */
+	protected function getBlocks()
+	{
+		return blx()->assets->getAllBlocks();
+	}
+
+	/**
+	 * Gets the content.
+	 *
+	 * @access protected
+	 * @return AssetContentRecord
+	 */
+	protected function getContent()
+	{
+		return blx()->assets->getFileContentRecordByFileId($this->id);
+	}
+
+
+}

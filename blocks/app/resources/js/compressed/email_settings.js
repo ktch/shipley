@@ -1,0 +1,10 @@
+/*!
+ * Blocks by Pixel & Tonic
+ *
+ * @package   Blocks
+ * @author    Pixel & Tonic, Inc.
+ * @copyright Copyright (c) 2012, Pixel & Tonic, Inc.
+ * @license   http://blockscms.com/license1.0.html Blocks License
+ * @link      http://blockscms.com
+ */
+(function(a){var b=Blocks.Base.extend({$form:null,$protocolField:null,$protocolSelect:null,$hiddenFields:null,$testBtn:null,$testSpinner:null,$protocolSettingsPane:null,$protocolSettingsPaneHead:null,$protocolSettingsPaneBody:null,protocol:null,init:function(){this.$form=a("#settings-form");this.$protocolField=a("#protocol-field");this.$protocolSelect=a("#protocol");this.$hiddenFields=a("#hidden-fields");this.$testBtn=a("#test");this.$testSpinner=a("#test-spinner");this._onEmailTypeChange();this.addListener(this.$protocolSelect,"change","_onEmailTypeChange");this.addListener(this.$testBtn,"activate","sendTestEmail")},getField:function(c){return a("#"+b.protocolFields[this.protocol][c]+"-field")},_onEmailTypeChange:function(){if(this.protocol&&this.protocol in b.protocolFields){for(var e=0;e<b.protocolFields[this.protocol].length;e++){this.getField(e).appendTo(this.$hiddenFields)}}this.protocol=this.$protocolSelect.val();if(this.protocol in b.protocolFields){var c=this.$protocolField;for(var d=0;d<b.protocolFields[this.protocol].length;d++){var f=this.getField(d);f.insertAfter(c);c=f}}},sendTestEmail:function(){if(this.$testBtn.hasClass("active")){return}this.$testBtn.addClass("active");this.$testSpinner.removeClass("hidden");var c=Blocks.getPostData(this.$form);delete c.action;Blocks.postActionRequest("systemSettings/testEmailSettings",c,a.proxy(function(d){this.$testBtn.removeClass("active");this.$testSpinner.addClass("hidden");if(d.success){alert(Blocks.t("Email sent successfully! Check your inbox."))}else{var e=d.error||Blocks.t("An unknown error occurred.");alert(e)}},this))}},{protocolFields:{smtp:["host","port","smtpKeepAlive","smtpAuth","smtpAuthCredentials","smtpSecureTransportType","timeout"],pop:["username","password","host","port","timeout"],gmail:["username","password"]}});Blocks.emailSettingsForm=new b()})(jQuery);

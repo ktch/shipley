@@ -1,0 +1,107 @@
+{% extends (blx.hasPackage('Users') ? "users/_edit/layout" : "_layouts/cp") %}
+{% set centered = true %}
+{% import "_includes/forms" as forms %}
+
+
+{% if account is not defined and blx.request.segment(1) == 'myaccount' %}
+	{% set account = user %}
+{% endif %}
+
+
+{% if blx.hasPackage('Users') %}
+	{% if account is not defined and userId is defined %}
+		{% set account = blx.users.status('*').id(userId).first %}
+		{% if not account %}{% exit 404 %}{% endif %}
+	{% endif %}
+
+	{% set pageTitle = "Account Settings"|t %}
+{% else %}
+	{% set header %}
+		<h1>{{ "My Account"|t }}</h1>
+	{% endset %}
+{% endif %}
+
+
+{% set isNewAccount = (account is not defined or not account.id) %}
+
+
+{% set content %}
+	<form method="post" action="" accept-charset="UTF-8">
+		<input type="hidden" name="action" value="accounts/saveUser">
+		{% if isNewAccount %}
+			<input type="hidden" name="redirect" value="users/{userId}">
+		{% else %}
+			<input type="hidden" name="userId" value="{{ account.id }}">
+		{% endif %}
+
+		{{ forms.textField({
+			label: "Username"|t,
+			id: 'username',
+			name: 'username',
+			value: (account is defined ? account.username : null),
+			autofocus: true,
+			required: true,
+			errors: (account is defined ? account.getErrors('username') : null)
+		}) }}
+
+		{{ forms.textField({
+			label: "Email"|t,
+			id: 'email',
+			name: 'email',
+			value: (account is defined ? account.email : null),
+			required: true,
+			errors: (account is defined ? account.getErrors('email') : null)
+		}) }}
+
+		{% if isNewAccount and user.admin %}
+			{{ forms.checkboxField({
+				label: "Require verification"|t,
+				name: 'verificationRequired',
+				checked: (account is defined ? account.verificationRequired : true)
+			}) }}
+		{% endif %}
+
+		{% if account is defined and account.isCurrent or user.admin %}
+			{{ forms.passwordField({
+				label: "Password"|t,
+				instructions: (isNewAccount ? null : "Leave blank to keep password unchanged."|t),
+				id: 'newPassword',
+				name: 'newPassword',
+				errors: (account is defined ? account.getErrors('newPassword') : null)
+			}) }}
+		{% endif %}
+
+		{% if user.admin %}
+			{{ forms.checkboxField({
+				label: "Require a password reset on next login"|t,
+				name: 'passwordResetRequired',
+				checked: (account is defined ? account.passwordResetRequired : true)
+			}) }}
+		{% endif %}
+
+		{{ forms.selectField({
+			label: "Email Format"|t,
+			id: 'emailFormat',
+			name: 'emailFormat',
+			options: { text: "Plain Text"|t, html: "HTML"|t },
+			value: (account is defined ? account.emailFormat : 'text')
+		}) }}
+
+		{% if blx.hasPackage('Language') %}
+			{% set languageInput %}
+				<div class="select">
+					<select id="language" name="language">
+						{% set userLanguage = account is defined ? account.language : blx.app.language %}
+						{% for language in blx.i18n.getTranslatedLanguages %}
+							<option value="{{ language }}" {% if language == userLanguage %}selected{% endif %}>{{ blx.i18n.getLocaleName(language, language) }}</option>
+						{% endfor %}
+					</select>
+				</div>
+			{% endset %}
+			{{ forms.field({ label: "Language"|t, id: 'language' }, languageInput) }}
+		{% endif %}
+
+		<input type="submit" class="btn submit" value="{{ 'Save'|t }}">
+
+	</form>
+{% endset %}

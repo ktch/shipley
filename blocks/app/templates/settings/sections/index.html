@@ -1,0 +1,61 @@
+{% includeJsResource "js/SectionAdminTable.js" %}
+{% includeTranslations
+	"Are you sure you want to delete “{name}” and its {entries} entries?"
+%}
+
+{% extends "_layouts/cp" %}
+{% set title = "Sections"|t %}
+{% set centered = true %}
+
+
+{% set header %}
+	<h1>{{ title }}</h1>
+	<ul class="left">
+		<li><a href="{{ url('settings') }}" class="backbtn">{{ "Settings"|t }}</a></li>
+	</ul>
+{% endset %}
+
+
+{% set content %}
+	{% paginate blx.sections.limit(50) as sections %}
+
+		<p id="nosections"{% if sections|length %} class="hidden"{% endif %}>
+			{{ "No sections exist yet."|t }}
+		</p>
+
+		{% if sections|length %}
+
+			{% include "_includes/paginatelinks" with { type: "sections"|t } %}
+
+			<table id="sections" class="data">
+				<thead>
+					<th scope="col" width="33%">{{ "Name"|t }}</th>
+					<th scope="col" width="33%">{{ "Handle"|t }}</th>
+					<th scope="col" width="33%">{{ "Blocks"|t }}</th>
+					<td class="thin"></td>
+				</thead>
+				<tbody>
+					{% for section in sections %}
+						<tr data-id="{{ section.id }}" data-name="{{ section.name|t }}" data-entries="{{ blx.entries.sectionId(section.id).total }}">
+							<th scope="row"><a href="{{ url('settings/sections/' ~ section.id) }}">{{ section.name|t }}</a></th>
+							<td><code>{{ section.handle }}</code></td>
+							<td><a href="{{ url('settings/sections/' ~ section.id ~ '/blocks') }}">{{ blx.entryBlocks.getTotalBlocksBySectionId(section.id) }}</a></td>
+							<td class="thin"><a class="delete icon" title="{{ 'Delete'|t }}"></a></td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		{% endif %}
+
+	{% endpaginate %}
+
+	<div class="buttons">
+		<a href="{{ url('settings/sections/new') }}" class="btn add icon">{{ "New Section"|t }}</a>
+	</div>
+{% endset %}
+
+
+{% set js %}
+	new Blocks.ui.SectionAdminTable();
+{% endset %}
+{% includeJs js %}

@@ -1,0 +1,75 @@
+{% extends "_layouts/base" %}
+{% includeCssResource "css/cp.css" first %}
+
+{% set body %}
+	{% if user.admin and blx.config.devMode %}
+		<div id="devmode" title="{{ 'Blocks is running in Dev Mode.'|t }}"></div>
+	{% endif %}
+
+	<div id="sidebar">
+		<div id="header">
+			<h2 id="sitename">{{ siteName }}</h2>
+			<a id="account" data-icon="☺" class="menubtn" title="{{ 'My Account'|t }}"></a>
+			<div id="account-menu" class="menu">
+				{% if blx.hasPackage('Users') %}
+					<div class="userinfo">
+						<img src="{{ user.photo ? user.photoUrl : resourceUrl('images/user.gif') }}" width="100" height="100">
+						{% if user.fullName %}<div class="fullname">{{ user.fullName }}</div>{% endif %}
+						<div class="username">{{ user.username }}</div>
+					</div>
+				{% endif %}
+				<ul>
+					<li><a href="{{ url('myaccount') }}">{{ "My Account"|t }}</a></li>
+					<li><a href="{{ logoutUrl }}">{{ "Sign out"|t }}</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<nav class="nav">
+			<ul>
+				{% for handle, item in blx.cp.nav %}
+					<li>
+						<a id="nav-{{ handle }}" class="{% if item.hasIcon is defined and item.hasIcon %}hasicon{% endif %} {% if blx.request.segment(1) == handle %}sel{% endif %}" href="{{ url(handle) }}">
+							{{- item.name -}}
+							{%- if item.badge is defined and item.badge -%}
+								<span class="badge">{{ item.badge }}</span>
+							{%- endif -%}
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</nav>
+
+		<div id="version">
+			Blocks {{ blx.app.version }} build {{ blx.app.build }}
+		</div>
+	</div>
+
+	<div id="notifications-wrapper">
+		<div id="notifications">
+			{% for type, message in blx.session.flashes %}
+				<div class="notification {{ type }}">{{ message }}</div>
+			{% endfor %}
+		</div>
+	</div>
+
+	<div id="main" class="main">
+		{% if header is defined and header %}
+			<header class="header">
+				{{ header }}
+			</header>
+		{% endif %}
+
+		<div id="content"{% if centered is defined and centered %} class="centered"{% endif %}>
+			{% if tabs is defined and tabs %}
+				<nav id="tabs">
+					<ul>
+						{{ tabs }}
+					</ul>
+				</nav>
+			{% endif %}
+
+			{{ content }}
+		</div>
+	</div>
+{% endset %}

@@ -1,0 +1,239 @@
+{% extends "_layouts/cp" %}
+{% set centered = true %}
+{% includeCssResource "css/entry.css" %}
+{% includeJsResource "lib/jquery-ui-1.8.23.custom.min.js" %}
+{% import "_includes/forms" as forms %}
+
+
+{% if blx.hasPackage('PublishPro') %}
+	{% set section = blx.sections.handle(sectionHandle).first %}
+	{% if not section %}{% exit 404 %}{% endif %}
+
+	{% set permissionSuffix = 'InSection'~section.id %}
+{% else %}
+	{% set permissionSuffix = '' %}
+{% endif %}
+
+
+{% requirePermission 'editEntries'~permissionSuffix %}
+
+
+{% if entry is not defined and entryId is defined %}
+	{% if draftId is defined %}
+		{% set entry = blx.entryRevisions.getDraftById(draftId) %}
+	{% elseif versionId is defined %}
+		{% set entry = blx.entryRevisions.getVersionById(versionId) %}
+	{% else %}
+		{% set entry = blx.entries.id(entryId).status('*').first %}
+	{% endif %}
+
+	{% if not entry %}{% exit 404 %}{% endif %}
+{% endif %}
+
+
+{% set isNewEntry = (entry is not defined or not entry.id) %}
+
+
+{% if isNewEntry %}
+	{% requirePermission 'createEntries'~permissionSuffix %}
+{% elseif entry.authorId != user.id %}
+	{% requirePermission 'editPeerEntries'~permissionSuffix %}
+{% endif %}
+
+
+{% if not isNewEntry and entry.classHandle == 'EntryDraft' %}
+	{% if entry.creatorId != user.id %}
+		{% requirePermission 'editPeerEntryDrafts'~permissionSuffix %}
+	{% endif %}
+
+	{% set revisionLabel = "Draft {id}"|t({ id: draftId }) %}
+{% elseif not isNewEntry and entry.classHandle == 'EntryVersion' %}
+	{% set revisionLabel = "Version {id}"|t({ id: versionId }) %}
+{% else %}
+	{% set revisionLabel = "Current"|t %}
+{% endif %}
+
+
+{% if blx.hasPackage('PublishPro') %}
+	{% set blocks = blx.entryBlocks.getBlocksBySectionId(section.id) %}
+{% else %}
+	{% set blocks = blx.entryBlocks.getAllBlocks %}
+{% endif %}
+
+
+{% if isNewEntry %}
+	{% set title = "Create a new {section} entry"|t({ section: (blx.hasPackage('PublishPro') ? section.name : 'Blog'|t) }) %}
+{% else %}
+	{% set title = "Editing “{title}”"|t({ title: entry.title|t }) %}
+	{% if entry is defined and entry.classHandle != 'Entry' %}
+		{% set title = title ~ ' <span class="version"><span class="hidden">(</span>' ~ revisionLabel ~ '<span class="hidden">)</span></span>' %}
+	{% endif %}
+{% endif %}
+
+
+{% set hasSettingsErrors = (entry is defined and (entry.getErrors('slug') or entry.getErrors('postDate') or entry.getErrors('expiryDate') or entry.getErrors('tags'))) %}
+
+
+{% set header %}
+	<h1>{{ title|raw }}</h1>
+
+	<ul class="left">
+		<li><a href="{{ url('content') }}" class="backbtn">{{ "Entries"|t }}</a></li>
+	</ul>
+
+	{% if not isNewEntry and blx.hasPackage('PublishPro') %}
+		<ul class="right">
+			<li>
+				{% include "content/entries/_revisions" %}
+			</li>
+		</ul>
+	{% endif %}
+{% endset %}
+
+
+{% set tabs %}
+	<li><a class="edit icon active" data-target="entry-content">{{ "Content"|t }}</a></li>
+	<li><a class="settings icon{% if hasSettingsErrors %} error{% endif %}" data-target="entry-settings">{{ "Settings"|t }}</a></li>
+{% endset %}
+
+
+{% set content %}
+	<form method="post" action="" accept-charset="UTF-8">
+		{% if blx.hasPackage('PublishPro') %}
+			<input type="hidden" name="sectionId" value="{{ section.id }}">
+		{% endif %}
+
+		{% if not isNewEntry %}
+			<input type="hidden" name="entryId" value="{{ entry.id }}">
+		{% endif %}
+
+		<div id="entry-content">
+			{{ forms.textField({
+				label: (blx.hasPackage('PublishPro') ? section.titleLabel : "Title")|t,
+				id: 'title',
+				name: 'title',
+				value: (entry is defined ? entry.title : null),
+				errors: (entry is defined ? entry.getErrors('title') : null),
+				autofocus: true,
+				required: true
+			}) }}
+
+			{% include "_includes/blockfields" with {
+				blocks: blocks,
+				entity: (entry is defined ? entry : null)
+			} only %}
+		</div>
+
+		<div id="entry-settings" class="hidden">
+			{{ forms.textField({
+				label: "Slug"|t,
+				id: 'slug',
+				name: 'slug',
+				value: (entry is defined ? entry.slug : null),
+				errors: (entry is defined ? entry.getErrors('slug') : null),
+				required: true
+			}) }}
+
+			{% if blx.hasPackage('Users') %}
+				{{ forms.selectField({
+					label: "Author"|t,
+					id: 'author',
+					name: 'author',
+					options: blx.users.indexBy('id').find,
+					value: (entry is defined ? entry.authorId : user.id)
+				}) }}
+			{% endif %}
+
+			{{ forms.dateField({
+				label: "Post Date"|t,
+				instructions: "When should the entry go live? (Set automatically if left blank)"|t,
+				id: 'postDate',
+				name: 'postDate',
+				value: (entry is defined and entry.postDate ? entry.postDate.w3cDate : null),
+				errors: (entry is defined ? entry.getErrors('postDate') : null)
+			}) }}
+
+			{{ forms.dateField({
+				label: "Expiration Date"|t,
+				instructions: "When should the entry expire?"|t,
+				id: 'expiryDate',
+				name: 'expiryDate',
+				value: (entry is defined and entry.expiryDate ? entry.expiryDate.w3cDate : null),
+				errors: (entry is defined ? entry.getErrors('expiryDate') : null)
+			}) }}
+
+			{{ forms.textField({
+				label: "Tags"|t,
+				instructions: "List multiple tags separated by commas."|t,
+				id: 'tags',
+				name: 'tags',
+				value: (entry is defined ? entry.tags|join(', ') : null),
+				errors: (entry is defined ? entry.getErrors('tags') : null),
+			}) }}
+
+			{% if user.can('publishEntries'~permissionSuffix) %}
+				{% set statusLabel -%}
+					{{ "Status:"|t }} <i>{{ isNewEntry ? "Never saved"|t : entry.status|ucfirst|t }}</i>
+				{%- endset %}
+				{% set statusInput %}
+					{{ forms.checkboxField({
+						label: "Entry is enabled",
+						name: 'enabled',
+						checked: (entry is defined ? entry.enabled : true)
+					}) }}
+				{% endset %}
+				{{ forms.field({
+					label: statusLabel,
+					instructions: "An entry is only “live” if it is enabled, has a Post Date in the past, and an Expiration Date in the future."|t
+				}, statusInput) }}
+			{% endif %}
+		</div>
+
+		<hr>
+
+		<div class="buttons">
+			{% if not isNewEntry and entry.classHandle == 'EntryDraft' %}
+
+				<input type="hidden" name="action" value="entryRevisions/saveDraft">
+				<input type="hidden" name="redirect" value="{{ entry.cpEditUrl }}/drafts/{{ entry.draftId }}">
+				<input type="hidden" name="draftId" value="{{ entry.draftId }}">
+				<input type="submit" class="btn submit" value="{{ 'Save Draft'|t }}">
+
+				{% if user.can('publishEntries'~permissionSuffix) and (entry.creatorId == user.id or user.can('publishPeerEntryDrafts'~permissionSuffix)) %}
+					<input type="button" class="btn formsubmit" value="{{ 'Publish Draft'|t }}" data-action="entryRevisions/publishDraft" data-redirect="{{ entry.cpEditUrl }}">
+				{% endif %}
+
+			{% elseif not isNewEntry and entry.classHandle == 'EntryVersion' %}
+
+
+			{% else %}
+
+				{% if isNewEntry or not entry.enabled or user.can('publishEntries'~permissionSuffix) %}
+					<input type="hidden" name="action" value="entries/saveEntry">
+					{% if blx.hasPackage('PublishPro') %}
+						<input type="hidden" name="redirect" value="content/{{ section.handle }}/{entryId}">
+					{% else %}
+						<input type="hidden" name="redirect" value="content/blog/{entryId}">
+					{% endif %}
+					<input type="submit" class="btn submit" value="{{ 'Save'|t }}">
+
+					{% if not isNewEntry and blx.hasPackage('PublishPro') %}
+						<input type="button" class="btn formsubmit" value="{{ 'Save as Draft'|t }}" value="entryRevisions/createDraft" data-action="entryRevisions/saveDraft" data-redirect="{{ entry.cpEditUrl }}/drafts/{draftId}">
+					{% endif %}
+				{% else %}
+					{% if blx.hasPackage('PublishPro') %}
+						<input type="hidden" name="action" value="entryRevisions/createDraft">
+						<input type="hidden" name="redirect" value="{{ entry.cpEditUrl }}/drafts/{draftId}">
+						<input type="submit" class="btn submit" value="{{ 'Save as Draft'|t }}">
+					{% endif %}
+				{% endif %}
+			{% endif %}
+		</div>
+	</form>
+{% endset %}
+
+
+{% if entry is not defined or not entry.slug %}
+	{% includeJs "new Blocks.ui.SlugGenerator('#title', '#slug');" %}
+{% endif %}
+

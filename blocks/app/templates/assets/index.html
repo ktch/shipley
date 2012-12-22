@@ -1,0 +1,62 @@
+{% extends "_layouts/cp" %}
+{% set title = "Assets"|t %}
+{% includeCssResource "css/assets.css" %}
+{% set sources = blx.assets.getAllSources %}
+{% set view = 'thumbs' %}
+
+{% set header %}
+	<h1>{{ title }}</h1>
+{% endset %}
+
+
+{% set content %}
+	{% if sources %}
+
+        {% includeJsResource "js/Assets/AssetFileManager.js" %}
+        {% includeJsResource "js/global/ui/QQUploader.js" %}
+        {% includeJsResource "js/Assets/AssetPanel.js" %}
+
+        <div class="assets">
+            <nav class="nav">
+                <div class="buttons">
+                    <div class="assets-upload">
+                    </div>
+                </div>
+
+                <ul class="assets-sources">
+                    {% for source in sources %}
+                        {% set folder = blx.assets.getFolderBySourceId(source.id) %}
+                        {% if folder %}
+                            <li><a href="javascript:;" data-source="{{ source.id }}" data-folder="{{ folder.id }}">{{ source.name }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </nav>
+
+            <div class="asset-content">
+                <div class="toolbar">
+                    <div class="btngroup">
+                        <a class="btn thumbs" href="javascript:;"" title="{{ 'Display files as thumbnails'|t }}" data-icon="⌗"></a>
+                        <a class="btn list" href="javascript:;" title="{{ 'Display files in a list'|t }}" data-icon="•"></a>
+                    </div>
+
+                    <div class="search"><input type="text" class="text nicetext fullwidth" data-hint="{{ 'Search assets'|t }}"></div>
+                </div>
+                <div class="temp-spinner">Assets is working..</div>
+
+                <div class="folder-container" data-folder="0">
+
+                </div>
+
+                <div class="asset-status">
+
+                </div>
+            </div>
+        </div>
+	{% else %}
+		<p class="centeralign">
+			{{ "No asset sources exist yet."|t }}
+			<a class="go" href="{{ url('settings/assets/sources/new') }}">{{ "Create the first one"|t }}</a>
+		</p>
+	{% endif %}
+{% endset %}

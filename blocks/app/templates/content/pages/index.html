@@ -1,0 +1,46 @@
+{% extends "content/_layout" %}
+{% set title = "Pages"|t %}
+{% set tab = 'pages' %}
+{% set centered = true %}
+{% set pages = blx.pages.getEditablePages %}
+{% includeCssResource 'css/pages.css' %}
+
+
+{% set content %}
+	<p id="nopages"{% if pages|length %} class="hidden"{% endif %}>
+		{{ "No pages exist yet."|t }}
+	</p>
+
+	{% if pages|length %}
+		<table id="pages" class="data">
+			<thead>
+				<th scope="col" width="33%">{{ "Title"|t }}</th>
+				<th scope="col" width="33%">{{ "URL"|t }}</th>
+					<td class="thin"></td>
+			</thead>
+			<tbody>
+				{% for page in pages %}
+					<tr data-id="{{ page.id }}" data-name="{{ page.title|t }}">
+						<th><a href="{{ url('content/pages/'~page.id) }}">{{ page.title|t }}</a></th>
+						<td><a href="{{ page.getUrl }}" target="_blank">{{ page.getUrl }}</a></td>
+						<td class="thin"><a class="delete icon" title="{{ 'Delete'|t }}"></a></td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% endif %}
+
+	<div class="buttons">
+		<a class="btn add icon" href="{{ url('content/pages/new') }}">{{ "New Page"|t }}</a>
+	</div>
+{% endset %}
+
+
+{% set js %}
+	new Blocks.ui.AdminTable({
+		tableSelector: '#pages',
+		noObjectsSelector: '#nopages',
+		deleteAction: 'pages/deletePage'
+	});
+{% endset %}
+{% includeJs js %}

@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* alerts */
+#alerts { margin: 30px -30px 0; }
+
+#alerts .alert { border-top: 1px solid #ccc7c2; padding: 10px 30px; color: #e14545; background: #fff5f2; }
+
+/* dashboard */
+#widgets { position: relative; }
+
+.widget { display: none; margin: 0 -20px; padding: 0 20px; }
+
+/*.spinner { display: inline-block; vertical-align: bottom; width: 20px; height: 31px;  } */
+.widget.loading h2 { padding-right: 24px; background: url(../images/spinner.gif) no-repeat 100% 0; }
+
+.col:not(:first-child) .col-inner { margin-left: 0; padding-left: 25px; border-left: 1px solid #e5e5e5; }
+
+.col:not(:last-child) .col-inner { padding-right: 25px; border-right: 1px solid #e5e5e5; margin-right: -1px; }
+
+.col .widget { display: block; }
+
+.widget { padding-bottom: 25px; border-bottom: 1px solid #e5e5e5; }
+
+.widget + .widget { margin-top: 25px; }
+
+.widget form + .errors { margin-top: 15px; }
+
+/* Recent Entries widget */
+.recententries .body { overflow: hidden; }

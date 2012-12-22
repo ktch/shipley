@@ -1,0 +1,18 @@
+{% extends "_layouts/base" %}
+{% set title = "Blocks Update"|t %}
+{% includeCssResource "css/update.css" %}
+{% includeJsResource "js/update.js" %}
+
+{% includeTranslations
+	"Release Notes"
+%}
+
+{% set body %}
+	<div id="status">{{ "Preparing to update…"|t }}</div>
+{% endset %}
+
+
+{% set js %}
+	window.updateHandle = "{{ handle }}";
+{% endset %}
+{% includeJs js %}

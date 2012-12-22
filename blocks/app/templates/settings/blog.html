@@ -1,0 +1,22 @@
+{% extends "_layouts/cp" %}
+{% set title = "Blog"|t %}
+{% set centered = true %}
+
+
+{% set header %}
+	<h1>{{ title }}</h1>
+	<ul class="left">
+		<li><a href="{{ url('settings') }}" class="backbtn">{{ "Settings"|t }}</a></li>
+	</ul>
+{% endset %}
+
+
+{% set content %}
+	<h2>{{ "Entry Blocks"|t }}</h2>
+
+	{% include "_includes/blockindex" with {
+		blocks: blx.entryBlocks.getAllBlocks,
+		settingsUrlPrefix: 'settings/blog/blocks/',
+		controller: 'entries'
+	} only %}
+{% endset %}
