@@ -72,29 +72,32 @@ class __TwigTemplate_33afe9cf7b08eaa76016f0d5c9f9180c extends Twig_Template
 \t\t\t<h1 class=\"small\">A Shipley Street Story</h1>
 \t\t\t<div class=\"intro-line\"></div>
 \t\t\t<p>The legacy of Chris White</p>
+\t\t\t
 \t\t</div> <!-- end title -->
 \t</div> <!-- end intro -->
 \t
 \t
 \t<nav>
 \t\t<ul>
-\t\t\t<li><a href=\"#story\">The Story</a></li>
-\t\t\t<li><a href=\"#plan\">The Plan</a></li>
-\t\t\t<li><a href=\"#team\">The Team</a></li>
+\t\t\t<li><a href=\"#intro\">Top</a></li>
+\t\t\t<li><a href=\"#work\">The Story</a></li>
+\t\t\t<li><a href=\"#services\">The Plan</a></li>
+\t\t\t<li><a href=\"#about\">The Team</a></li>
 \t\t\t<li><a href=\"#contact\">Get Involved</a></li>
 \t\t</ul>
 \t\t
 \t\t<select name=\"dropdpown\" size=\"1\" onChange=\"scrollTo(this.value)\">
 \t\t\t<option value=\"\" selected=\"selected\">Menu</option>
-\t\t\t<option value=\"#story\">The Story</option>
-\t\t\t<option value=\"#plan\">The Plan</option>
-\t\t\t<option value=\"#team\">The Team</option> 
+\t\t\t<option value=\"#intro\">Top</option>
+\t\t\t<option value=\"#work\">The Story</option>
+\t\t\t<option value=\"#services\">The Plan</option> 
+\t\t\t<option value=\"#about\">The Team</option> 
 \t\t\t<option value=\"#contact\">Get Involved</option> 
 \t\t</select>
 \t</nav>
 \t
 \t
-\t<div id=\"story\">
+\t<div id=\"work\">
 \t\t<div class=\"container\">
 \t\t
 \t\t\t<div class=\"sixteen columns\">
@@ -102,27 +105,21 @@ class __TwigTemplate_33afe9cf7b08eaa76016f0d5c9f9180c extends Twig_Template
 \t\t\t</div> <!-- end sixteen columns -->
 \t\t\t
 \t\t\t<div class=\"eight columns\">
-\t\t\t\t<p>This is a story about an abandoned building on an abandoned street, in an abandoned district of a small American city.</p>
+                ";
+        // line 90
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["globals"]) ? $context["globals"] : $this->getContext($context, "globals")), "storyLeft"), "html", null, true);
+        echo "
 \t\t\t</div> 
 \t\t\t
 \t\t\t<div class=\"eight columns\">
-\t\t\t\t<p>Send a distress signal, and inform the Senate that all on board were killed. Alderaan? I'm not going to Alderaan. I've got to go home. It's late, I'm in for it as it is. She must have hidden the plans in the escape pod.</p>
+                ";
+        // line 94
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["globals"]) ? $context["globals"] : $this->getContext($context, "globals")), "storyRight"), "html", null, true);
+        echo "
 \t\t\t</div>
 \t\t\t
 \t\t\t<div class=\"clear\"></div>
 \t\t\t
-\t\t\t
-\t\t\t<div class=\"eight columns\">
-\t\t\t\t<p class=\"mid-text\">I have traced the Rebel spies to her. Now she is my only link to finding their secret base. You don't believe in the Force, do you? All right. Well, take care of yourself, Han. Hokey religions and ancient weapons are no match for a good blaster at your side, kid.</p>
-\t\t\t</div> 
-\t\t\t
-\t\t\t<div class=\"eight columns\">
-\t\t\t\t<p class=\"mid-text\">Send a distress signal, and inform the Senate that all on board were killed. Alderaan? I'm not going to Alderaan. I've got to go home. It's late, I'm in for it as it is. She must have hidden the plans in the escape pod.</p>
-\t\t\t</div>
-\t\t\t
-\t\t\t
-\t\t\t
-\t\t\t<div class=\"clear\"></div>
 \t\t\t
 \t\t\t
 \t\t</div> <!-- end container -->
@@ -131,52 +128,77 @@ class __TwigTemplate_33afe9cf7b08eaa76016f0d5c9f9180c extends Twig_Template
 \t
 \t<div id=\"separator1\">
 \t\t<div class=\"bg2\"></div>
-\t\t<p class=\"separator\">A forgotten alleyway of dumpsters and fire escapes</p>
+        <p class=\"separator\">";
+        // line 107
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["globals"]) ? $context["globals"] : $this->getContext($context, "globals")), "gap1"), "html", null, true);
+        echo "</p>
 \t</div>
 \t
 \t
-\t<div id=\"plan\">
+\t<div id=\"services\">
 \t\t<div class=\"container\">
 \t\t
 \t\t\t<div class=\"sixteen columns\">
-\t\t\t\t<h2 class=\"white\"><span class=\"lines\">Services</span></h2>
+\t\t\t\t<h2 class=\"white\"><span class=\"lines\">The Plan</span></h2>
 \t\t\t</div> <!-- end sixteen columns -->
 \t\t\t
 \t\t\t<div class=\"clear\"></div>
 \t\t\t
 \t\t\t<div class=\"eight columns\">
-\t\t\t\t<p class=\"white\">I have traced the Rebel spies to her. Now she is my only link to finding their secret base. You don't believe in the Force, do you? All right. Well, take care of yourself, Han. Hokey religions and ancient weapons are no match for a good blaster at your side, kid.</p>
+                ";
+        // line 121
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["globals"]) ? $context["globals"] : $this->getContext($context, "globals")), "planLeft"), "html", null, true);
+        echo "
 \t\t\t</div> 
 \t\t\t
 \t\t\t<div class=\"eight columns\">
-\t\t\t\t<p class=\"white\">Send a distress signal, and inform the Senate that all on board were killed. Alderaan? I'm not going to Alderaan. I've got to go home. It's late, I'm in for it as it is. She must have hidden the plans in the escape pod.</p>
+                ";
+        // line 125
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["globals"]) ? $context["globals"] : $this->getContext($context, "globals")), "planRight"), "html", null, true);
+        echo "
 \t\t\t</div>
 \t\t\t
 \t\t\t<div class=\"clear\"></div>
 \t\t\t
 \t\t\t<div class=\"serv-list\">
 \t\t\t\t<div class=\"one-third column\">
-\t\t\t\t\t<h4>Design</h4>
-\t\t\t\t\t<img src=\"images/serv-icon1.png\" alt=\"\" />
-\t\t\t\t\t<p class=\"white\">He is here. A tremor in the Force. The last time I felt it was in the presence of my old master. Hey, Luke! May the Force be with you. The plans you refer to will soon be back in our hands.</p>
+                    <h4>";
+        // line 132
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["globals"]) ? $context["globals"] : $this->getContext($context, "globals")), "step1Heading"), "html", null, true);
+        echo "</h4>
+\t\t\t\t\t<img src=\"\" alt=\"\" />
+                    <p class=\"white\">";
+        // line 134
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["globals"]) ? $context["globals"] : $this->getContext($context, "globals")), "step1"), "html", null, true);
+        echo "</p>
 \t\t\t\t</div>
 \t\t\t\t
 \t\t\t\t<div class=\"one-third column\">
-\t\t\t\t\t<h4>Development</h4>
-\t\t\t\t\t<img src=\"images/serv-icon2.png\" alt=\"\" />
-\t\t\t\t\t<p class=\"white\">He is here. A tremor in the Force. The last time I felt it was in the presence of my old master. Hey, Luke! May the Force be with you. The plans you refer to will soon be back in our hands.</p>
+                    <h4>";
+        // line 138
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["globals"]) ? $context["globals"] : $this->getContext($context, "globals")), "step2Heading"), "html", null, true);
+        echo "</h4>
+\t\t\t\t\t<img src=\"\" alt=\"\" />
+                    <p class=\"white\">";
+        // line 140
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["globals"]) ? $context["globals"] : $this->getContext($context, "globals")), "step2"), "html", null, true);
+        echo "</p>
 \t\t\t\t</div>
 \t\t\t\t
 \t\t\t\t<div class=\"one-third column\">
-\t\t\t\t\t<h4>Wordpress</h4>
-\t\t\t\t\t<img src=\"images/serv-icon3.png\" alt=\"\" />
-\t\t\t\t\t<p class=\"white\">He is here. A tremor in the Force. The last time I felt it was in the presence of my old master. Hey, Luke! May the Force be with you. The plans you refer to will soon be back in our hands.</p>
+                    <h4>";
+        // line 144
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["globals"]) ? $context["globals"] : $this->getContext($context, "globals")), "step3Heading"), "html", null, true);
+        echo "</h4>
+\t\t\t\t\t<img src=\"\" alt=\"\" />
+                    <p class=\"white\">";
+        // line 146
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["globals"]) ? $context["globals"] : $this->getContext($context, "globals")), "step3"), "html", null, true);
+        echo "</p>
 \t\t\t\t</div>
 \t\t\t</div> <!-- end serv-list -->
 \t\t\t
 \t\t\t<div class=\"clear\"></div>
-\t\t\t
-\t\t\t\t
 \t\t\t
 \t\t</div> <!-- end container -->
 \t</div> <!-- end services -->
@@ -184,79 +206,63 @@ class __TwigTemplate_33afe9cf7b08eaa76016f0d5c9f9180c extends Twig_Template
 \t
 \t<div id=\"separator2\">
 \t\t<div class=\"bg3\"></div>
-\t\t<p class=\"separator\">A tremor in the Force. The last time I felt it was in the <br />presence of my old master</p>
+        <p class=\"separator\">";
+        // line 158
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["globals"]) ? $context["globals"] : $this->getContext($context, "globals")), "gap2"), "html", null, true);
+        echo "</p>
 \t</div>
 \t
 \t
-\t<div id=\"team\">
+\t<div id=\"about\">
 \t\t<div class=\"container\">
 \t\t
 \t\t\t<div class=\"sixteen columns\">
 \t\t\t\t<h2><span class=\"lines\">The Team</span></h2>
 \t\t\t</div> <!-- end sixteen columns -->
-\t\t\t
-\t\t\t<div class=\"eight columns\">
-\t\t\t\t<p>I have traced the Rebel spies to her. Now she is my only link to finding their secret base. You don't believe in the Force, do you? All right. Well, take care of yourself, Han. Hokey religions and ancient weapons are no match for a good blaster at your side, kid.</p>
-\t\t\t</div> 
-\t\t\t
-\t\t\t<div class=\"eight columns\">
-\t\t\t\t<p>Send a distress signal, and inform the Senate that all on board were killed. Alderaan? I'm not going to Alderaan. I've got to go home. It's late, I'm in for it as it is. She must have hidden the plans in the escape pod.</p>
-\t\t\t</div>
-\t\t\t
-\t\t\t<div class=\"clear\"></div>
-\t\t\t
-\t\t\t
-\t\t\t<div class=\"clear\"></div>
+\t\t
 \t\t\t
 \t\t\t<div class=\"team\">
 \t\t\t
-\t\t\t
-\t\t\t\t<div class=\"one-third column\">
-\t\t\t\t\t<img src=\"images/about-pic.png\" alt=\"\" />
-\t\t\t\t\t<p class=\"t-name\">Michael Kalmbach</p>
-\t\t\t\t\t<p class=\"t-type\">Producer</p>
-\t\t\t\t\t<ul>
-\t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-twitter.png\" alt=\"\" /></a></li>
-\t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-facebook.png\" alt=\"\" /></a></li>
-\t\t\t\t\t</ul>
-\t\t\t\t\t<p>Look, I can take you as far as Anchorhead. You can get a transport there to Mos Eisley or wherever you're going. You're all clear, kid. Let's blow this thing and go home!</p>
-\t\t\t\t\t<p>Kid, I've flown from one side of this galaxy to the other. There's no mystical energy field that controls my destiny. It's all a lot of simple tricks and nonsense.</p>
+                ";
+        // line 172
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["blx"]) ? $context["blx"] : $this->getContext($context, "blx")), "entries"), "section", array(0 => "team"), "method"), "find", array(), "method"));
+        foreach ($context['_seq'] as $context["_key"] => $context["member"]) {
+            // line 173
+            echo "\t\t\t\t<div class=\"one-third column\">
+                    <img src=\"http://s3.amazonaws.com/shipley/";
+            // line 174
+            echo twig_escape_filter($this->env, _twig_default_filter(twig_join_filter($this->getAttribute((isset($context["member"]) ? $context["member"] : $this->getContext($context, "member")), "image")), "images/about-pic.png"), "html", null, true);
+            echo "\" alt=\"\" />
+                    <p class=\"t-name\">";
+            // line 175
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["member"]) ? $context["member"] : $this->getContext($context, "member")), "title"), "html", null, true);
+            echo "</p>
+                    <p class=\"t-type\">";
+            // line 176
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["member"]) ? $context["member"] : $this->getContext($context, "member")), "job"), "html", null, true);
+            echo "</p>
+\t\t\t\t\t<!-- <ul>
+\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-twitter.png\" alt=\"\" /></a></li>
+\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-facebook.png\" alt=\"\" /></a></li>
+\t\t\t\t\t\t\t\t\t\t</ul> -->
+                    <p>";
+            // line 181
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["member"]) ? $context["member"] : $this->getContext($context, "member")), "description"), "html", null, true);
+            echo "</p>
 \t\t\t\t</div> <!-- end one-third column -->
-\t\t\t\t
-\t\t\t\t<div class=\"one-third column\">
-\t\t\t\t\t<img src=\"images/about-pic.png\" alt=\"\" />
-\t\t\t\t\t<p class=\"t-name\">Cali Doe</p>
-\t\t\t\t\t<p class=\"t-type\">Web Designer</p>
-\t\t\t\t\t<ul>
-\t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-twitter.png\" alt=\"\" /></a></li>
-\t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-facebook.png\" alt=\"\" /></a></li>
-\t\t\t\t\t</ul>
-\t\t\t\t\t<p>Look, I can take you as far as Anchorhead. You can get a transport there to Mos Eisley or wherever you're going. You're all clear, kid. Let's blow this thing and go home!</p>
-\t\t\t\t\t<p>Kid, I've flown from one side of this galaxy to the other. There's no mystical energy field that controls my destiny. It's all a lot of simple tricks and nonsense.</p>
-\t\t\t\t</div> <!-- end one-third column -->
-\t\t\t\t
-\t\t\t\t<div class=\"one-third column\">
-\t\t\t\t\t<img src=\"images/about-pic.png\" alt=\"\" />
-\t\t\t\t\t<p class=\"t-name\">Cali Doe</p>
-\t\t\t\t\t<p class=\"t-type\">Web Designer</p>
-\t\t\t\t\t<ul>
-\t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-twitter.png\" alt=\"\" /></a></li>
-\t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-facebook.png\" alt=\"\" /></a></li>
-\t\t\t\t\t</ul>
-\t\t\t\t\t<p>Look, I can take you as far as Anchorhead. You can get a transport there to Mos Eisley or wherever you're going. You're all clear, kid. Let's blow this thing and go home!</p>
-\t\t\t\t\t<p>Kid, I've flown from one side of this galaxy to the other. There's no mystical energy field that controls my destiny. It's all a lot of simple tricks and nonsense.</p>
-\t\t\t\t</div> <!-- end one-third column -->
+                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['member'], $context['_parent'], $context['loop']);
+        $context = array_merge($_parent, array_intersect_key($context, $_parent));
+        // line 184
+        echo "\t\t\t\t
 \t\t\t\t
 \t\t\t</div> <!-- end team -->
 \t\t\t
 \t\t\t<div class=\"clear\"></div>
 \t\t\t
-\t\t\t<div class=\"sixteen columns\">
-\t\t\t\t<div class=\"action\">
-\t\t\t\t\t<p>You don't believe in the force do you?</p>
-\t\t\t\t\t<a href=\"#\"><div class=\"button1\">Say hey</div></a>
-\t\t\t\t</div> <!-- end action -->
-\t\t\t</div> <!-- end sixteen columns -->
 \t\t\t
 \t\t</div> <!-- end container -->
 \t</div> <!-- end about -->
@@ -264,7 +270,7 @@ class __TwigTemplate_33afe9cf7b08eaa76016f0d5c9f9180c extends Twig_Template
 \t
 \t<div id=\"separator3\">
 \t\t<div class=\"bg4\"></div>
-\t\t<p class=\"separator\">A tremor in the Force. The last time I felt it was in the <br />presence of my old master</p>
+\t\t<p class=\"separator\">Living spiritually, bridging divides, giving voice to the voiceless</p>
 \t</div>
 \t
 \t
@@ -272,16 +278,12 @@ class __TwigTemplate_33afe9cf7b08eaa76016f0d5c9f9180c extends Twig_Template
 \t\t<div class=\"container\">
 \t\t
 \t\t\t<div class=\"sixteen columns\">
-\t\t\t\t<h2 class=\"white\"><span class=\"lines\">Contact</span></h2>
+\t\t\t\t<h2 class=\"white\"><span class=\"lines\">Get Involved</span></h2>
 \t\t\t</div> <!-- end sixteen columns -->
 \t\t\t
-\t\t\t<div class=\"eight columns\">
-\t\t\t\t<p class=\"white\">I have traced the Rebel spies to her. Now she is my only link to finding their secret base. You don't believe in the Force, do you? All right. Well, take care of yourself, Han. Hokey religions and ancient weapons are no match for a good blaster at your side, kid.</p>
+\t\t\t<div class=\"sixteen columns\">
+\t\t\t\t<p class=\"white\">We need help to get this story out there. Let us know if you'd like to partner with us to help make this film happen.</p>
 \t\t\t</div> 
-\t\t\t
-\t\t\t<div class=\"eight columns\">
-\t\t\t\t<p class=\"white\">Send a distress signal, and inform the Senate that all on board were killed. Alderaan? I'm not going to Alderaan. I've got to go home. It's late, I'm in for it as it is. She must have hidden the plans in the escape pod.</p>
-\t\t\t</div>
 \t\t\t
 \t\t\t<div class=\"clear\"></div>
 \t\t\t
@@ -289,7 +291,7 @@ class __TwigTemplate_33afe9cf7b08eaa76016f0d5c9f9180c extends Twig_Template
 \t\t\t\t<div class=\"contact-form\">
 \t\t\t\t\t
 \t\t\t\t\t<div class=\"done\">
-\t\t\t\t\t\t<b>Thank you!</b> I have received your message. 
+\t\t\t\t\t\t<b>Thank you!</b> We have received your message. 
 \t\t\t\t\t</div>
 \t\t\t\t
 \t\t\t\t\t<form method=\"post\" action=\"process.php\">
@@ -314,25 +316,18 @@ class __TwigTemplate_33afe9cf7b08eaa76016f0d5c9f9180c extends Twig_Template
 \t\t\t\t\t
 \t\t\t\t\t<h5>Contact Info</h5>
 \t\t\t\t
-\t\t\t\t\t<p class=\"white\"><img src=\"images/icn-phone.png\" alt=\"\" /> +123 456 789</p>
-\t\t\t\t\t<p class=\"white\"><img src=\"images/icn-email.png\" alt=\"\" /> youremail@here.com</p>
-\t\t\t\t\t<p class=\"white\"><img src=\"images/icn-address.png\" alt=\"\" /> 767 Fifth Ave. <br />
-\t\t\t\t\t\tNew York, NY 10153</p>
+\t\t\t\t\t<p class=\"white\"><img src=\"images/icn-phone.png\" alt=\"\" /> (302) 397-8472</p>
+\t\t\t\t\t<p class=\"white\"><img src=\"images/icn-email.png\" alt=\"\" /> thecreativevisionfactory@gmail.com</p>
+\t\t\t\t\t<p class=\"white\"><img src=\"images/icn-address.png\" alt=\"\" /> 617 N Shipley Street <br />
+\t\t\t\t\t\tWilmington, DE</p>
 \t\t\t\t</div> <!-- end contact-info -->
 \t\t\t\t
-\t\t\t\t<div class=\"social\">
-\t\t\t\t\t<ul>
-\t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-twitter2.png\" alt=\"\" /></a></li>
-\t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-facebook2.png\" alt=\"\" /></a></li>
-\t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-gplus.png\" alt=\"\" /></a></li>
-\t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-linkedin.png\" alt=\"\" /></a></li>
-\t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-forrst.png\" alt=\"\" /></a></li>
-\t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-skype.png\" alt=\"\" /></a></li>
-\t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-dribbble.png\" alt=\"\" /></a></li>
-\t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-pinterest.png\" alt=\"\" /></a></li>
-\t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-vimeo.png\" alt=\"\" /></a></li>
-\t\t\t\t\t</ul>
-\t\t\t\t</div> <!-- end social -->
+\t\t\t\t<!-- <div class=\"social\">
+\t\t\t\t\t\t\t\t\t<ul>
+\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-twitter2.png\" alt=\"\" /></a></li>
+\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\"><img src=\"images/icn-facebook2.png\" alt=\"\" /></a></li>
+\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t</div> <!-- end social --> -->
 \t\t\t\t
 \t\t\t</div> <!-- end eight columns -->
 \t\t\t
@@ -340,7 +335,7 @@ class __TwigTemplate_33afe9cf7b08eaa76016f0d5c9f9180c extends Twig_Template
 \t\t\t
 \t\t\t<div class=\"sixteen columns\">
 \t\t\t\t<div class=\"copyright\">
-\t\t\t\t\t<p>&copy; 2012 All Rights Reserved</p>
+\t\t\t\t\t<p>&copy; the Kitchen 2012 All Rights Reserved</p>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t\t
@@ -427,8 +422,13 @@ class __TwigTemplate_33afe9cf7b08eaa76016f0d5c9f9180c extends Twig_Template
         return "";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  19 => 1,);
+        return array (  260 => 184,  251 => 181,  243 => 176,  239 => 175,  235 => 174,  232 => 173,  228 => 172,  211 => 158,  196 => 146,  191 => 144,  184 => 140,  179 => 138,  172 => 134,  167 => 132,  157 => 125,  150 => 121,  133 => 107,  117 => 94,  110 => 90,  19 => 1,);
     }
 }
