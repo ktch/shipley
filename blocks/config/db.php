@@ -27,12 +27,12 @@ return array(
 /**
  * The database username to connect with.
  */
-'user' => 'root',
+'user' => 'app',
 
 /**
  * The database password to connect with.
  */
-'password' => '1812war',
+'password' => 'b.9NAT=uXFJP7+=tze#sd',
 
 /**
  * The name of the database to select.
