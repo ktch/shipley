@@ -1,2 +1,5 @@
 DS_Store
 blocks/config/db.php
+blocks/storage/logs/ 
+blocks/storage/phperrors.log 
+blocks/storage/runtime/ 
