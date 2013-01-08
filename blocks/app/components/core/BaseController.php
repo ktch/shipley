@@ -20,7 +20,7 @@ abstract class BaseController extends \CController
 	 * If set to false, you are required to be logged in to execute any of the given controller's actions.
 	 * If set to true, anonymous access is allowed for all of the given controller's actions.
 	 * If the value is an array of action names, then you must be logged in for any action method except for the ones in the array list.
-	 * If you have a controller that where the majority of action methods will be anonymous, but you only want require login on a few, it's best to use blx()->user->requireLogin() in the individual methods.
+	 * If you have a controller that where the majority of action methods will be anonymous, but you only want require login on a few, it's best to use blx()->userSession->requireLogin() in the individual methods.
 	 *
 	 * @var bool
 	 */
@@ -142,9 +142,9 @@ abstract class BaseController extends \CController
 	 */
 	public function requireLogin()
 	{
-		if (blx()->user->isGuest())
+		if (blx()->userSession->isGuest())
 		{
-			blx()->user->requireLogin();
+			blx()->userSession->requireLogin();
 		}
 	}
 
@@ -153,7 +153,7 @@ abstract class BaseController extends \CController
 	 */
 	public function requireAdmin()
 	{
-		if (!blx()->user->isAdmin())
+		if (!blx()->userSession->isAdmin())
 		{
 			throw new HttpException(403, Blocks::t('This action may only be performed by admins.'));
 		}
@@ -260,14 +260,14 @@ abstract class BaseController extends \CController
 		{
 			if (!preg_grep("/{$this->getAction()->id}/i", $this->allowAnonymous))
 			{
-				blx()->user->requireLogin();
+				blx()->userSession->requireLogin();
 			}
 		}
 		elseif (is_bool($this->allowAnonymous))
 		{
 			if ($this->allowAnonymous == false)
 			{
-				blx()->user->requireLogin();
+				blx()->userSession->requireLogin();
 			}
 		}
 

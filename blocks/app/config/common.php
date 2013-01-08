@@ -62,15 +62,6 @@ $configArray = array(
 	),
 
 	'componentAliases' => array(
-		'app.components.accounts.controllers.AccountsController',
-		'app.components.accounts.enums.InvalidLoginMode',
-		'app.components.accounts.enums.UserStatus',
-		'app.components.accounts.models.AccountSettingsModel',
-		'app.components.accounts.models.PasswordModel',
-		'app.components.accounts.models.UserModel',
-		'app.components.accounts.models.UsernameModel',
-		'app.components.accounts.records.UserRecord',
-		'app.components.accounts.services.AccountsService',
 		'app.components.assets.BaseAssetSourceType',
 		'app.components.assets.assetsourcetypes.LocalAssetSourceType',
 		'app.components.assets.controllers.AssetOperationsController',
@@ -317,6 +308,15 @@ $configArray = array(
 		'app.components.updates.services.UpdatesService',
 		'app.components.updates.variables.UpdatesVariable',
 		'app.components.updates.widgets.UpdatesWidget',
+		'app.components.users.controllers.UsersController',
+		'app.components.users.enums.InvalidLoginMode',
+		'app.components.users.enums.UserStatus',
+		'app.components.users.models.AccountSettingsModel',
+		'app.components.users.models.PasswordModel',
+		'app.components.users.models.UserModel',
+		'app.components.users.models.UsernameModel',
+		'app.components.users.records.UserRecord',
+		'app.components.users.services.UsersService',
 		'app.components.usersession.UserIdentity',
 		'app.components.usersession.services.UserSessionService',
 		'app.components.usersession.variables.UserSessionVariable',
@@ -411,25 +411,25 @@ if (in_array('Language', $packages))
 if (in_array('Users', $packages))
 {
 	$configArray['componentAliases'] = array_merge($configArray['componentAliases'], array(
-		'app.components.accounts.controllers.UserGroupsController',
-		'app.components.accounts.controllers.UsersController',
-		'app.components.accounts.linktypes.UserLinkType',
-		'app.components.accounts.models.UserGroupModel',
-		'app.components.accounts.models.UserProfileBlockModel',
-		'app.components.accounts.records.UserGroupRecord',
-		'app.components.accounts.records.UserGroup_UserRecord',
-		'app.components.accounts.records.UserPermissionRecord',
-		'app.components.accounts.records.UserPermission_UserGroupRecord',
-		'app.components.accounts.records.UserPermission_UserRecord',
-		'app.components.accounts.records.UserProfileBlockRecord',
-		'app.components.accounts.records.UserProfileRecord',
-		'app.components.accounts.services.UserGroupsService',
-		'app.components.accounts.services.UserPermissionsService',
-		'app.components.accounts.services.UsersService',
-		'app.components.accounts.services.criteria.UserCriteria',
-		'app.components.accounts.variables.UserGroupsVariable',
-		'app.components.accounts.variables.UserPermissionsVariable',
-		'app.components.accounts.variables.UserProfileBlocksVariable',
+		'app.components.users.controllers.UserProfilesController',
+		'app.components.users.controllers.UserSettingsController',
+		'app.components.users.linktypes.UserLinkType',
+		'app.components.users.models.UserGroupModel',
+		'app.components.users.models.UserProfileBlockModel',
+		'app.components.users.records.UserGroupRecord',
+		'app.components.users.records.UserGroup_UserRecord',
+		'app.components.users.records.UserPermissionRecord',
+		'app.components.users.records.UserPermission_UserGroupRecord',
+		'app.components.users.records.UserPermission_UserRecord',
+		'app.components.users.records.UserProfileBlockRecord',
+		'app.components.users.records.UserProfileRecord',
+		'app.components.users.services.UserGroupsService',
+		'app.components.users.services.UserPermissionsService',
+		'app.components.users.services.UserProfilesService',
+		'app.components.users.services.criteria.UserCriteria',
+		'app.components.users.variables.UserGroupsVariable',
+		'app.components.users.variables.UserPermissionsVariable',
+		'app.components.users.variables.UserProfileBlocksVariable',
 
 	));
 }
@@ -518,7 +518,7 @@ if (in_array('Users', $packages))
 //  Component config
 // -------------------------------------------
 
-$components['accounts']['class']          = 'Blocks\AccountsService';
+$components['users']['class']             = 'Blocks\UsersService';
 $components['assets']['class']            = 'Blocks\AssetsService';
 $components['assetSizes']['class']        = 'Blocks\AssetSizesService';
 $components['assetIndexing']['class']     = 'Blocks\AssetIndexingService';
@@ -555,7 +555,7 @@ if (in_array('PublishPro', $packages))
 
 if (in_array('Users', $packages))
 {
-	$components['users']['class']             = 'Blocks\UsersService';
+	$components['userProfiles']['class']      = 'Blocks\UserProfilesService';
 	$components['userGroups']['class']        = 'Blocks\UserGroupsService';
 	$components['userPermissions']['class']   = 'Blocks\UserPermissionsService';
 }
@@ -599,15 +599,15 @@ $components['log']['routes'] = array(
 	),
 );
 
-$components['session']['autoStart']   = true;
-$components['session']['cookieMode']  = 'only';
-$components['session']['class']       = 'Blocks\HttpSessionService';
-$components['session']['sessionName'] = 'BlocksSessionId';
+$components['httpSession']['autoStart']   = true;
+$components['httpSession']['cookieMode']  = 'only';
+$components['httpSession']['class']       = 'Blocks\HttpSessionService';
+$components['httpSession']['sessionName'] = 'BlocksSessionId';
 
-$components['user']['class'] = 'Blocks\UserSessionService';
-$components['user']['allowAutoLogin']  = true;
-$components['user']['loginUrl']        = $blocksConfig['loginPath'];
-$components['user']['autoRenewCookie'] = true;
+$components['userSession']['class'] = 'Blocks\UserSessionService';
+$components['userSession']['allowAutoLogin']  = true;
+$components['userSession']['loginUrl']        = $blocksConfig['loginPath'];
+$components['userSession']['autoRenewCookie'] = true;
 
 $configArray['components'] = array_merge($configArray['components'], $components);
 

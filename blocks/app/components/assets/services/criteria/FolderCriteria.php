@@ -33,7 +33,7 @@ class FolderCriteria extends BaseCriteria
 	 */
 	protected function findEntities()
 	{
-		return blx()->assets->getFolders($this);
+		return blx()->assets->findFolders($this);
 	}
 
 	/**
@@ -44,7 +44,7 @@ class FolderCriteria extends BaseCriteria
 	 */
 	protected function findFirstEntity()
 	{
-		return blx()->assets->getFolder($this);
+		return blx()->assets->findFolder($this);
 	}
 
 	/**

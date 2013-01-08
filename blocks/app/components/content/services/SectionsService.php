@@ -163,7 +163,7 @@ class SectionsService extends BaseEntityService
 
 			foreach ($allSectionIds as $sectionId)
 			{
-				if (blx()->user->can('editEntriesInSection'.$sectionId))
+				if (blx()->userSession->checkPermission('editEntriesInSection'.$sectionId))
 				{
 					$this->_editableSectionIds[] = $sectionId;
 				}
@@ -282,7 +282,7 @@ class SectionsService extends BaseEntityService
 		$whereConditions = array();
 		$whereParams = array();
 
-		if ($criteria->editable && !blx()->user->isAdmin())
+		if ($criteria->editable && !blx()->userSession->isAdmin())
 		{
 			$editableSectionIds = $this->getEditableSectionIds();
 

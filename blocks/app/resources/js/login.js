@@ -86,7 +86,7 @@ var LoginForm = Blocks.Base.extend({
 			loginName: this.$loginNameInput.val()
 		};
 
-		Blocks.postActionRequest('accounts/forgotPassword', data, $.proxy(function(response) {
+		Blocks.postActionRequest('users/forgotPassword', data, $.proxy(function(response) {
 			if (response.success)
 			{
 				new MessageSentModal();
@@ -108,7 +108,7 @@ var LoginForm = Blocks.Base.extend({
 			rememberMe: (this.$rememberMeCheckbox.attr('checked') ? 'y' : '')
 		};
 
-		Blocks.postActionRequest('accounts/login', data, $.proxy(function(response) {
+		Blocks.postActionRequest('users/login', data, $.proxy(function(response) {
 			if (response.success)
 			{
 				window.location = window.returnUrl;

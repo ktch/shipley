@@ -39,7 +39,7 @@ class EntryRevisionsController extends BaseController
 			$draft = new EntryDraftModel();
 			$draft->id = blx()->request->getRequiredPost('entryId');
 			$draft->sectionId = blx()->request->getRequiredPost('sectionId');
-			$draft->creatorId = blx()->user->getUser()->id;
+			$draft->creatorId = blx()->userSession->getUser()->id;
 
 			$draft->language = blx()->language;
 		}
@@ -48,7 +48,7 @@ class EntryRevisionsController extends BaseController
 
 		if (blx()->entryRevisions->saveDraft($draft))
 		{
-			blx()->user->setNotice(Blocks::t('Draft saved.'));
+			blx()->userSession->setNotice(Blocks::t('Draft saved.'));
 
 			$this->redirectToPostedUrl(array(
 				'entryId' => $draft->id,
@@ -57,7 +57,7 @@ class EntryRevisionsController extends BaseController
 		}
 		else
 		{
-			blx()->user->setError(Blocks::t('Couldn’t save draft.'));
+			blx()->userSession->setError(Blocks::t('Couldn’t save draft.'));
 
 			$this->renderRequestedTemplate(array(
 				'entry' => $draft
@@ -84,7 +84,7 @@ class EntryRevisionsController extends BaseController
 
 		if (blx()->entryRevisions->publishDraft($draft))
 		{
-			blx()->user->setNotice(Blocks::t('Draft published.'));
+			blx()->userSession->setNotice(Blocks::t('Draft published.'));
 
 			$this->redirectToPostedUrl(array(
 				'entryId' => $draft->id
@@ -92,7 +92,7 @@ class EntryRevisionsController extends BaseController
 		}
 		else
 		{
-			blx()->user->setError(Blocks::t('Couldn’t publish draft.'));
+			blx()->userSession->setError(Blocks::t('Couldn’t publish draft.'));
 
 			$this->renderRequestedTemplate(array(
 				'entry' => $draft
@@ -123,7 +123,7 @@ class EntryRevisionsController extends BaseController
 		}
 		else
 		{
-			$draft->authorId = blx()->user->getUser()->id;
+			$draft->authorId = blx()->userSession->getUser()->id;
 		}
 	}
 }

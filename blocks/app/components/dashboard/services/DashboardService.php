@@ -57,7 +57,7 @@ class DashboardService extends BaseApplicationComponent
 	public function getUserWidgets($indexBy = null)
 	{
 		$widgetRecords = WidgetRecord::model()->ordered()->findAllByAttributes(array(
-			'userId' => blx()->user->getUser()->id
+			'userId' => blx()->userSession->getUser()->id
 		));
 
 		return WidgetModel::populateModels($widgetRecords, $indexBy);
@@ -73,7 +73,7 @@ class DashboardService extends BaseApplicationComponent
 	{
 		$widgetRecord = WidgetRecord::model()->findByAttributes(array(
 			'id' => $id,
-			'userId' => blx()->user->getUser()->id
+			'userId' => blx()->userSession->getUser()->id
 		));
 
 		if ($widgetRecord)
@@ -239,7 +239,7 @@ class DashboardService extends BaseApplicationComponent
 	 */
 	private function _getUserWidgetRecordById($widgetId = null)
 	{
-		$userId = blx()->user->getUser()->id;
+		$userId = blx()->userSession->getUser()->id;
 
 		if ($widgetId)
 		{

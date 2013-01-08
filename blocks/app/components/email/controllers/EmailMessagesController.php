@@ -35,7 +35,7 @@ class EmailMessagesController extends BaseController
 		}
 		else
 		{
-			$message->language = blx()->language;
+			$message->language = Blocks::getLanguage();
 		}
 
 		if (blx()->emailMessages->saveMessage($message))

@@ -196,7 +196,7 @@ class InstallService extends BaseApplicationComponent
 		$user->language = blx()->language;
 		$user->admin = true;
 
-		if (blx()->accounts->saveUser($user))
+		if (blx()->users->saveUser($user))
 		{
 			Blocks::log('User created successfully.', \CLogger::LEVEL_INFO);
 		}
@@ -217,7 +217,7 @@ class InstallService extends BaseApplicationComponent
 	{
 		Blocks::log('Logging in user.', \CLogger::LEVEL_INFO);
 
-		if (blx()->user->login($inputs['username'], $inputs['password']))
+		if (blx()->userSession->login($inputs['username'], $inputs['password']))
 		{
 			Blocks::log('User logged in successfully.', \CLogger::LEVEL_INFO);
 		}

@@ -16,7 +16,6 @@ namespace Blocks;
  */
 class AssetFileModel extends BaseEntityModel
 {
-
 	/**
 	 * User the filename as the string representation.
 	 *
@@ -58,28 +57,31 @@ class AssetFileModel extends BaseEntityModel
 	/**
 	 * Returns the URL to the file.
 	 *
+	 * @param string|null $sizeHandle
 	 * @return string|null
 	 */
-	public function getUrl()
+	public function getUrl($sizeHandle = null)
 	{
-		return blx()->assetSources->getSourceTypeById($this->sourceId)->getSettings()->url . $this->getFolder()->fullPath . $this->filename;
+		return blx()->assetSources->getSourceTypeById($this->sourceId)->getSettings()->url .
+			$this->getFolder()->fullPath .
+			($sizeHandle ? '_'.$sizeHandle.'/' : '') .
+			$this->filename;
 	}
 
 	/**
-	 * Get Thumbnail URL.
+	 * Get the thumb's URL.
 	 *
 	 * @param int $size
 	 * @return string
 	 */
-	public function getThumbnailUrl($size = 125)
+	public function getThumbUrl($size = 125)
 	{
 		if (!is_numeric($size))
 		{
 			$size = 125;
 		}
 
-		return UrlHelper::getResourceUrl('assets/' . $this->id . '/' . $size);
-
+		return UrlHelper::getResourceUrl('assetthumbs/'.$this->id.'/'.$size);
 	}
 
 	/**
@@ -103,6 +105,4 @@ class AssetFileModel extends BaseEntityModel
 	{
 		return blx()->assets->getFileContentRecordByFileId($this->id);
 	}
-
-
 }

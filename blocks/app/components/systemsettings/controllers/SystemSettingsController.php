@@ -39,12 +39,12 @@ class SystemSettingsController extends BaseController
 			$info->licenseKey = $generalSettingsModel->licenseKey;
 			$info->save();
 
-			blx()->user->setNotice(Blocks::t('General settings saved.'));
+			blx()->userSession->setNotice(Blocks::t('General settings saved.'));
 			$this->redirectToPostedUrl();
 		}
 		else
 		{
-			blx()->user->setError(Blocks::t('Couldn’t save general settings.'));
+			blx()->userSession->setError(Blocks::t('Couldn’t save general settings.'));
 
 			$this->renderRequestedTemplate(array(
 				'post' => $generalSettingsModel
@@ -65,12 +65,12 @@ class SystemSettingsController extends BaseController
 		{
 			if (blx()->systemSettings->saveSettings('email', $settings))
 			{
-				blx()->user->setNotice(Blocks::t('Email settings saved.'));
+				blx()->userSession->setNotice(Blocks::t('Email settings saved.'));
 				$this->redirectToPostedUrl();
 			}
 		}
 
-		blx()->user->setError(Blocks::t('Couldn’t save email settings.'));
+		blx()->userSession->setError(Blocks::t('Couldn’t save email settings.'));
 
 		$this->renderRequestedTemplate(array(
 			'settings' => $emailSettings

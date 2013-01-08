@@ -23,6 +23,6 @@ class RequireLogin_Node extends \Twig_Node
 	{
 		$compiler
 		    ->addDebugInfo($this)
-		    ->write("\Blocks\blx()->user->requireLogin();\n");
+		    ->write("\Blocks\blx()->userSession->requireLogin();\n");
 	}
 }

@@ -56,7 +56,7 @@ class PagesController extends BaseEntityController
 
 		if (blx()->pages->savePage($page))
 		{
-			blx()->user->setNotice(Blocks::t('Page saved.'));
+			blx()->userSession->setNotice(Blocks::t('Page saved.'));
 
 			$this->redirectToPostedUrl(array(
 				'pageId' => $page->id
@@ -64,7 +64,7 @@ class PagesController extends BaseEntityController
 		}
 		else
 		{
-			blx()->user->setError(Blocks::t('Couldn’t save page.'));
+			blx()->userSession->setError(Blocks::t('Couldn’t save page.'));
 
 			$this->renderRequestedTemplate(array(
 				'page' => $page
@@ -86,7 +86,7 @@ class PagesController extends BaseEntityController
 
 		if (blx()->pages->savePageContent($page))
 		{
-			blx()->user->setNotice(Blocks::t('Page saved.'));
+			blx()->userSession->setNotice(Blocks::t('Page saved.'));
 
 			$this->redirectToPostedUrl(array(
 				'pageId' => $page->id
@@ -94,7 +94,7 @@ class PagesController extends BaseEntityController
 		}
 		else
 		{
-			blx()->user->setError(Blocks::t('Couldn’t save page.'));
+			blx()->userSession->setError(Blocks::t('Couldn’t save page.'));
 
 			$this->renderRequestedTemplate(array(
 				'content' => $content

@@ -26,11 +26,11 @@ class PluginsController extends BaseController
 
 		if (blx()->plugins->installPlugin($className))
 		{
-			blx()->user->setNotice(Blocks::t('Plugin installed.'));
+			blx()->userSession->setNotice(Blocks::t('Plugin installed.'));
 		}
 		else
 		{
-			blx()->user->setError(Blocks::t('Couldn’t install plugin.'));
+			blx()->userSession->setError(Blocks::t('Couldn’t install plugin.'));
 		}
 
 		$this->redirectToPostedUrl();
@@ -46,11 +46,11 @@ class PluginsController extends BaseController
 
 		if (blx()->plugins->uninstallPlugin($className))
 		{
-			blx()->user->setNotice(Blocks::t('Plugin uninstalled.'));
+			blx()->userSession->setNotice(Blocks::t('Plugin uninstalled.'));
 		}
 		else
 		{
-			blx()->user->setError(Blocks::t('Couldn’t uninstall plugin.'));
+			blx()->userSession->setError(Blocks::t('Couldn’t uninstall plugin.'));
 		}
 
 		$this->redirectToPostedUrl();
@@ -66,11 +66,11 @@ class PluginsController extends BaseController
 
 		if (blx()->plugins->enablePlugin($className))
 		{
-			blx()->user->setNotice(Blocks::t('Plugin enabled.'));
+			blx()->userSession->setNotice(Blocks::t('Plugin enabled.'));
 		}
 		else
 		{
-			blx()->user->setError(Blocks::t('Couldn’t enable plugin.'));
+			blx()->userSession->setError(Blocks::t('Couldn’t enable plugin.'));
 		}
 
 		$this->redirectToPostedUrl();
@@ -86,11 +86,11 @@ class PluginsController extends BaseController
 
 		if (blx()->plugins->disablePlugin($className))
 		{
-			blx()->user->setNotice(Blocks::t('Plugin disabled.'));
+			blx()->userSession->setNotice(Blocks::t('Plugin disabled.'));
 		}
 		else
 		{
-			blx()->user->setError(Blocks::t('Couldn’t disable plugin.'));
+			blx()->userSession->setError(Blocks::t('Couldn’t disable plugin.'));
 		}
 
 		$this->redirectToPostedUrl();
@@ -113,7 +113,7 @@ class PluginsController extends BaseController
 
 		if (blx()->plugins->savePluginSettings($plugin, $settings))
 		{
-			blx()->user->setNotice(Blocks::t('Plugin settings saved.'));
+			blx()->userSession->setNotice(Blocks::t('Plugin settings saved.'));
 
 			$this->redirectToPostedUrl();
 		}
@@ -121,7 +121,7 @@ class PluginsController extends BaseController
 		{
 			$plugin->setSettings($settings);
 
-			blx()->user->setError(Blocks::t(Blocks::t('Couldn’t save plugin settings.')));
+			blx()->userSession->setError(Blocks::t(Blocks::t('Couldn’t save plugin settings.')));
 
 			$this->renderRequestedTemplate(array(
 				'plugin' => $plugin

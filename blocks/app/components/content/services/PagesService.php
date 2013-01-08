@@ -126,7 +126,7 @@ class PagesService extends BaseEntityService
 
 		foreach ($allPages as $page)
 		{
-			if (blx()->user->can('editPage'.$page->id))
+			if (blx()->userSession->checkPermission('editPage'.$page->id))
 			{
 				if ($indexBy === null)
 				{
@@ -314,14 +314,14 @@ class PagesService extends BaseEntityService
 	{
 		$record = PageContentRecord::model()->findByAttributes(array(
 			'pageId'   => $pageId,
-			'language' => blx()->language,
+			'language' => Blocks::getLanguage(),
 		));
 
 		if (empty($record))
 		{
 			$record = new PageContentRecord();
 			$record->pageId = $pageId;
-			$record->language = blx()->language;
+			$record->language = Blocks::getLanguage();
 		}
 
 		return $record;

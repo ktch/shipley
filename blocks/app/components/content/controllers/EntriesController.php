@@ -36,7 +36,7 @@ class EntriesController extends BaseEntityController
 		$entry = new EntryModel();
 
 		$entry->id = blx()->request->getPost('entryId');
-		$entry->authorId = blx()->request->getPost('author', blx()->user->getUser()->id);
+		$entry->authorId = blx()->request->getPost('author', blx()->userSession->getUser()->id);
 		$entry->title = blx()->request->getPost('title');
 		$entry->slug = blx()->request->getPost('slug');
 		$entry->postDate = $this->getDateFromPost('postDate');
@@ -73,7 +73,7 @@ class EntriesController extends BaseEntityController
 			}
 			else
 			{
-				blx()->user->setNotice(Blocks::t('Entry saved.'));
+				blx()->userSession->setNotice(Blocks::t('Entry saved.'));
 
 				$this->redirectToPostedUrl(array(
 					'entryId' => $entry->id
@@ -90,7 +90,7 @@ class EntriesController extends BaseEntityController
 			}
 			else
 			{
-				blx()->user->setError(Blocks::t('Couldn’t save entry.'));
+				blx()->userSession->setError(Blocks::t('Couldn’t save entry.'));
 
 				$this->renderRequestedTemplate(array(
 					'entry' => $entry

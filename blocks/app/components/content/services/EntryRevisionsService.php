@@ -47,7 +47,7 @@ class EntryRevisionsService extends BaseApplicationComponent
 	{
 		$draftRecord = EntryDraftRecord::model()->find(array(
 			'condition' => 'entryId = :entryId AND language = :language',
-			'params' => array(':entryId' => $entryId, ':language' => blx()->language),
+			'params' => array(':entryId' => $entryId, ':language' => Blocks::getLanguage()),
 			'offset' => $offset
 		));
 
@@ -67,7 +67,7 @@ class EntryRevisionsService extends BaseApplicationComponent
 	{
 		$draftRecords = EntryDraftRecord::model()->findAllByAttributes(array(
 			'entryId' => $entryId,
-			'language' => blx()->language,
+			'language' => Blocks::getLanguage(),
 		));
 
 		return EntryDraftModel::populateModels($draftRecords);
@@ -82,7 +82,7 @@ class EntryRevisionsService extends BaseApplicationComponent
 	public function getEditableDraftsByEntryId($entryId)
 	{
 		$editableDrafts = array();
-		$user = blx()->user->getUser();
+		$user = blx()->userSession->getUser();
 
 		if ($user)
 		{
@@ -205,7 +205,7 @@ class EntryRevisionsService extends BaseApplicationComponent
 	{
 		$versionRecord = EntryVersionRecord::model()->findByAttributes(array(
 			'entryId' => $entryId,
-			'language' => blx()->language,
+			'language' => Blocks::getLanguage(),
 		));
 
 		if ($versionRecord)
@@ -224,7 +224,7 @@ class EntryRevisionsService extends BaseApplicationComponent
 	{
 		$versionRecords = EntryVersionRecord::model()->findAllByAttributes(array(
 			'entryId' => $entryId,
-			'language' => blx()->language,
+			'language' => Blocks::getLanguage(),
 		));
 
 		return EntryVersionModel::populateModels($versionRecords, 'versionId');
@@ -241,7 +241,7 @@ class EntryRevisionsService extends BaseApplicationComponent
 		$versionRecord = new EntryVersionRecord();
 		$versionRecord->entryId = $entry->id;
 		$versionRecord->sectionId = $entry->sectionId;
-		$versionRecord->creatorId = blx()->user->getUser()->id;
+		$versionRecord->creatorId = blx()->userSession->getUser()->id;
 		$versionRecord->language = $entry->language;
 		$versionRecord->data = $this->_getRevisionData($entry);
 		return $versionRecord->save();
